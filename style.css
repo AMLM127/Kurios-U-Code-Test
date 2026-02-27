@@ -1,0 +1,54 @@
+:root {
+    --neon: #00ff41;
+    --bg: #050505;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--neon);
+    font-family: 'Courier New', monospace;
+    margin: 0; padding: 20px;
+    text-transform: uppercase;
+}
+
+#history {
+    height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+}
+
+.line { margin-bottom: 8px; font-size: 0.9rem; }
+.hint { color: #ffae00; font-style: italic; }
+.error { color: #ff3333; font-weight: bold; }
+.success { color: #fff; text-shadow: 0 0 8px var(--neon); }
+
+.input-area { display: flex; }
+#user-input {
+    background: transparent; border: none; color: var(--neon);
+    font-family: inherit; font-size: 1rem; outline: none; width: 100%;
+}
+
+.ascii-art { font-size: 8px; line-height: 8px; margin-bottom: 20px; }
+
+/* PUZZLE DE HOVER: El texto "revelado" */
+.invisible-data {
+    color: transparent;
+    cursor: help;
+    border: 1px solid #111;
+}
+.invisible-data:hover {
+    color: #444;
+    background: #111;
+}
+
+/* Añadir al final de tu style.css */
+.typing {
+    border-right: 2px solid var(--neon);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--neon); }
+}
