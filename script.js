@@ -95,7 +95,7 @@ input.addEventListener('keydown', (e) => {
             if (story[currentLevel]) {
                 playLevel(currentLevel);
             } else {
-                typeEffect("SISTEMA DESBLOQUEADO. ADIÓS, AARAM.");
+                typeEffect("SISTEMA DESBLOQUEADO. ADIÓS, USUARIO.");
             }
         } else {
             typeEffect("ERROR: Acceso denegado.");
@@ -108,4 +108,5 @@ input.addEventListener('keydown', (e) => {
 // Arrancar el juego manualmente al cargar
 window.onload = () => {
     playLevel(1);
+
 };
