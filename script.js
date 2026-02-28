@@ -4,109 +4,155 @@ const input = document.getElementById('user-input');
 let currentLevel = 1;
 let isTyping = false;
 
-// 1. Definir ASCII fuera para evitar errores de sintaxis
-const ART_WELCOME = `
-   ____  ____  ____  ____  ____ 
-  (_  _)( ___)(  _ \(  _ \(  _ )
-    )(   )__)  )   / ) __/ ) __/
-   (__) (____)(_)\_)(__)  (__)  
+// --- SECCIÓN DE ARTE ASCII ---
+const bootup = `
+ ▄    ▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░▌  ▐░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░▌ ▐░▌ ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌▐░▌  ▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌     ▐░▌       ▐░▌▐░▌          
+▐░▌░▌   ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌     ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ 
+▐░░▌    ▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌
+▐░▌░▌   ▐░▌       ▐░▌▐░█▀▀▀▀█░█▀▀      ▐░▌     ▐░▌       ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌
+▐░▌▐░▌  ▐░▌       ▐░▌▐░▌     ▐░▌       ▐░▌     ▐░▌       ▐░▌          ▐░▌
+▐░▌ ▐░▌ ▐░█▄▄▄▄▄▄▄█░▌▐░▌      ▐░▌  ▄▄▄▄█░█▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌ ▄▄▄▄▄▄▄▄▄█░▌
+▐░▌  ▐░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+ ▀    ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀                                                                 
+                                                                  
 `;
 
-// 2. Base de datos de la historia
-const story = {
+const ART_SUCCESS = `
+    __________
+   /          \\
+  |  SUCCESS   |
+   \\__________/
+`;
+
+// --- CONFIGURACIÓN DE NIVELES ---
+// Ahora puedes usar: "Texto normal" o { text: "Texto con color", color: "red" }
+const puzzles = {
     1: {
         dialogs: [
-            ART_WELCOME,
-            "SISTEMA: Conexión establecida...",
-            "IA: Bienvenido, Operador Aaram.",
-            "PUZZLE 1: Cuanto más le quitas, más grande se hace. ¿Qué es?"
+            "Bienvenido a esta experiencia interactiva.",
+            "Tienes la tarea de recuperar un expediente corrupto, has de resolver acertijos para hacerlo",
+            "De dudar de la respuesta, el sistema es capaz de ayudarte con el comando /pista",  
+            { text: bootup, color: "#B027F5" },
+            { text: "SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
+            { text: "ERROR: Servidor no encontrado.", color: "red" },
+            { text: "Intentando cargar respaldo...", color: "red" },
+            { text: ".", color: "red" },
+            { text: "..", color: "red" },
+            { text: "...", color: "red" },
+            { text: "Inicializando asistente IA.", color: "#B027F5" },
+            "<IA> Usted ha activado a Kurios IA, su herramienta de reparacion.",
+            "<IA> Solo para confirmar, es usted un hacker?"
         ],
-        solution: "un agujero",
-        hint: "Piensa en el suelo o en una tela."
+        answer: "no",
+        hint: "Has de responder con tu verdad."
     },
     2: {
         dialogs: [
-            "IA: Correcto. Accediendo al núcleo...",
-            "PUZZLE 2: ¿Qué número sigue en esta serie? 1, 1, 2, 3, 5, 8..."
+            "<IA> Perfecto!",
+            "<IA> Revisare ahora que esta fallando, por favor espere.",
+            { text: "ERROR: Creemos que quizas si eres un hacker", color: "red" },
+            { text: "Para confirmar tu identidad, responda con cuantos objetos usted vea usualmente.", color: "red" },
         ],
-        solution: "13",
-        hint: "Suma los dos números anteriores (Sucesión de Fibonacci)."
-    }
-    // Puedes ir añadiendo más aquí siguiendo la misma estructura
+        answer: "4",
+        hint: "El escritorio tiene tus respuestas."
+    },
+
 };
 
-// 3. Función de escritura con manejo de errores
-async function typeEffect(text) {
-    if (!text) return;
+function openWindow(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function closeWindow(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Función Typewriter con Soporte de Color y Auto-Scroll
+async function typeWriter(text, color = "#00ff41") {
     isTyping = true;
     input.disabled = true;
     
-    const div = document.createElement('div');
-    div.className = 'line';
+    const line = document.createElement('div');
+    line.style.marginBottom = "10px";
+    line.style.color = color;
+    line.style.whiteSpace = "pre-wrap"; 
+    line.style.fontFamily = "monospace";
+    history.appendChild(line);
     
-    // Si detectamos que es ASCII (muchos símbolos), usamos estilo pre
-    if (text.includes('_') || text.includes('/') || text.includes('@')) {
-        div.style.whiteSpace = "pre";
-        div.style.fontFamily = "monospace";
-    }
-    
-    history.appendChild(div);
+    // Si es ASCII o texto largo, va volando (0.5ms), si es corto va normal (25ms)
+    const speed = text.length > 500 ? 0.5 : 25;
     
     for (let i = 0; i < text.length; i++) {
-        // Soporte para saltos de línea
         if (text[i] === '\n') {
-            div.innerHTML += '<br>';
+            line.innerHTML += '<br>';
         } else {
-            div.innerHTML += text[i];
+            line.innerHTML += text[i];
         }
+        
+        // Mantener el scroll al fondo mientras escribe
         history.scrollTop = history.scrollHeight;
-        await new Promise(res => setTimeout(res, 15)); 
+        await new Promise(r => setTimeout(r, speed));
     }
+    
+    // Asegurar scroll al final de la línea
+    history.scrollTop = history.scrollHeight;
     
     isTyping = false;
     input.disabled = false;
     input.focus();
 }
 
-async function playLevel(levelNum) {
-    const data = story[levelNum];
-    if (!data) return;
+// Función para manejar la secuencia de diálogos (Soporta objetos con color)
+async function playLevelSequence(levelNum) {
+    const p = puzzles[levelNum];
+    if (!p) return;
 
-    for (const line of data.dialogs) {
-        await typeEffect(line);
-        await new Promise(res => setTimeout(res, 500));
+    for (const line of p.dialogs) {
+        // Si la línea es un objeto {text, color}, lo usamos. Si no, usamos verde por defecto.
+        if (typeof line === 'object') {
+            await typeWriter(line.text, line.color);
+        } else {
+            await typeWriter(line);
+        }
+        await new Promise(r => setTimeout(r, 600)); 
     }
 }
 
-// 4. Escuchar el teclado
+async function handleInput(val) {
+    const p = puzzles[currentLevel];
+    const userAns = val.toLowerCase().trim();
+
+    if (userAns === '/pista') {
+        await typeWriter("SISTEMA: " + p.hint, "#ffae00");
+    } else if (userAns === p.answer) {
+        await typeWriter("> ACCESO NIVEL " + currentLevel + " CONCEDIDO.", "#fff");
+        currentLevel++;
+        
+        if (puzzles[currentLevel]) {
+            setTimeout(() => playLevelSequence(currentLevel), 1000);
+        } else {
+            await typeWriter("SISTEMA RESTAURADO TOTALMENTE. BIENVENIDO, OPERADOR.", "cyan");
+        }
+    } else {
+        await typeWriter("> ERROR: CREDENCIALES INVÁLIDAS.", "#ff3333");
+    }
+}
+
 input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !isTyping) {
-        const val = input.value.toLowerCase().trim();
+        const val = input.value;
+        const line = document.createElement('div');
+        line.innerHTML = `<span style="color:white">> ${val}</span>`;
+        history.appendChild(line);
         
-        // Mostrar lo que el usuario escribió
-        const userDiv = document.createElement('div');
-        userDiv.innerHTML = `<span style="color:white">> ${input.value}</span>`;
-        history.appendChild(userDiv);
-
-        if (val === 'pista') {
-            typeEffect("PISTA: " + story[currentLevel].hint);
-        } else if (val === story[currentLevel].solution) {
-            currentLevel++;
-            if (story[currentLevel]) {
-                playLevel(currentLevel);
-            } else {
-                typeEffect("SISTEMA DESBLOQUEADO. ADIÓS, USUARIO.");
-            }
-        } else {
-            typeEffect("ERROR: Acceso denegado.");
-        }
-        
+        handleInput(val);
         input.value = '';
     }
 });
 
-// Arrancar el juego manualmente al cargar
 window.onload = () => {
-    playLevel(1);
-
+    playLevelSequence(1);
 };

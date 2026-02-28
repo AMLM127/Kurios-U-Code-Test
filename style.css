@@ -1,54 +1,99 @@
 :root {
-    --neon: #00ff41;
-    --bg: #050505;
+    --bg-teal: #008080;
+    --win-gray: #c0c0c0;
+    --win-blue: #000080;
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--neon);
-    font-family: 'Courier New', monospace;
-    margin: 0; padding: 20px;
-    text-transform: uppercase;
+    background-color: var(--bg-teal);
+    margin: 0;
+    font-family: 'Tahoma', sans-serif;
+    overflow: hidden;
 }
 
-#history {
-    height: 70vh;
+#desktop {
+    width: 100vw;
+    height: calc(100vh - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Icons */
+.icon {
+    width: 80px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.icon-img { font-size: 40px; }
+.icon span { font-size: 12px; background: rgba(0,0,0,0.5); padding: 2px; }
+
+/* Windows */
+.window {
+    position: absolute;
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: #fff #808080 #808080 #fff;
+    width: 400px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+#terminal-win{
+    width: 800px;
+    height: 800px;
+}
+
+
+.title-bar {
+    background: var(--win-blue);
+    color: white;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.window-content {
+    padding: 10px;
+    height: 300px;
     overflow-y: auto;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #222;
 }
 
-.line { margin-bottom: 8px; font-size: 0.9rem; }
-.hint { color: #ffae00; font-style: italic; }
-.error { color: #ff3333; font-weight: bold; }
-.success { color: #fff; text-shadow: 0 0 8px var(--neon); }
+.term-body { background: black; color: #00ff41; font-family: monospace; height:755px}
+.file-body { background: white; color: black; }
 
-.input-area { display: flex; }
-#user-input {
-    background: transparent; border: none; color: var(--neon);
-    font-family: inherit; font-size: 1rem; outline: none; width: 100%;
+.close { width: 18px; height: 18px; font-size: 10px; cursor: pointer; }
+
+input {
+    background: transparent;
+    border: none;
+    color: #00ff41;
+    outline: none;
+    width: 90%;
+    font-family: monospace;
 }
 
-.ascii-art { font-size: 8px; line-height: 8px; margin-bottom: 20px; }
-
-/* PUZZLE DE HOVER: El texto "revelado" */
-.invisible-data {
-    color: transparent;
+/* HOVER PUZZLE INSIDE FILE */
+.hidden-hover {
+    color: white; /* Invisible against white background */
+    transition: color 0.5s;
     cursor: help;
-    border: 1px solid #111;
 }
-.invisible-data:hover {
-    color: #444;
-    background: #111;
+.hidden-hover:hover { color: red; font-weight: bold; }
+
+/* Taskbar */
+#taskbar {
+    height: 40px;
+    background: var(--win-gray);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
 }
 
-/* Añadir al final de tu style.css */
-.typing {
-    border-right: 2px solid var(--neon);
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: var(--neon); }
-}
