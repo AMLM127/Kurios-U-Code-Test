@@ -27,37 +27,170 @@ const ART_SUCCESS = `
    \\__________/
 `;
 
+const Alien = `                                    
+            -**********-             
+         :****************:          
+       .********************         
+      -**********************-       
+     :************************.      
+     **************************      
+     =    +**************=    =      
+     +      .**********       =      
+     *        +******=        +      
+     .+        +****+        +       
+      :*.      .****.      .*:       
+       .**:     ****     -**         
+         +****************+          
+           *************+            
+             =********=              
+                ....                 
+                                     
+              +******+               
+          .**************.           
+         ******************          
+       -********************:        
+      -**********************:       
+      ************************       
+     **************************      
+    .**************************.     
+    ***************************+     
+    ****************************     
+    ****************************     
+   :****************************.          
+`;
+const samurai = `                                            
+            =%=               %#:            
+         =@@@*                 @@@#.         
+       *@@@@.                 *@@@@@:       
+        %@@@@                  +@@@@=        
+         #@@@:       #@=       %@@@:         
+          *@@@      =@@@      :@@@.          
+           *@@%      @@%     -@@@:           
+            .@@@#%@@#@@#@@@%@@@*             
+               *@@@@@@@@@@@@%=               
+              #%-  +@C1@@@   *@=              
+       :#@@. -@@@@@@%@@@#@@@@@%. +@%*        
+       :@@@@+*@@@@@@@@@@@@@@@@@+-@@@%        
+         %@@@@@#=:        .-*%@B2@@@+         
+           == .#     +%     =+  #.           
+          :+  .@@%#%@@@@%#%@@*   #           
+         #@    +@@@@=*#=*@@@%:   =%+         
+        .       *+         %-      .         
+       .%=       :         +       %#        
+     .*@#        -+=*###+=*        :@%+      
+    .#+-          +@@@@@@%           -**     
+                    .:::                                                                 
+`;
+const weNeedYou = `                          :- -                       
+                      @@@@##*+@@@@@                  
+                    #@@%@@+ +..:+@@@                 
+                   @@@@@+= @ @@@@@@+@=               
+                   -@@@-@A4@@@@@@%  @@               
+                   @@@@%            @@               
+                    @#            - .                
+                  .@.               #                
+                   #@  %@@@@::.=@@@ -                
+                    *  =  =@@ =@@+@.                 
+                               .  #                  
+                       +=        -                   
+                       .:-  =@@%%=                   
+                   =@  *@@-@@@@@@-                   
+                  #@@@   @@    *@@-                  
+             :@@@@@@#@@@   @@@     @@@@              
+        +@@@@@@%%###@@@   %   @@@%  @@@@@@@@         
+      +@@@%#=-+*#***+@@  @@      @@@ @@@#@@@@        
+     .@@@@@@@@%=*###%@ +@%@@@@@@= #@  %@*@@@#        
+     =@@@@#+.-*@=*%@@@            @@@  =@%@*%        
+      @@-+==+%+#@#@#+  *@#@D1@@@@  @@#    @@@#        
+      @ -@@@@@@*#@  @             +@ @    @@@.       
+       .@@@@#=+**=-@@   =**   @@    *@@    @@@       
+        @%=*#=++@#@@@@     =@@@@-  @@@@@    @@@      
+      @@@@@-:+=%@@@@@@@@@@@- %@@@   @@@@    @@@      
+      @@.  +#%@#@%@@@@@@@@@@@@@@@@  @@@ @   *@@.     
+      @@ --@@@%#@@@@%%@@*###%@%@@@-  @ *@    @@@     
+      @@*#@@@%#@@@=-*@@@%%%%%@%%@@@   .@@@   @@@@    
+       @*-#%%#==**=%#*=-+*+***#*+*@=  @@%@    @@@    
+`;
+
 // --- CONFIGURACIÓN DE NIVELES ---
 // Ahora puedes usar: "Texto normal" o { text: "Texto con color", color: "red" }
 const puzzles = {
     1: {
         dialogs: [
-            "Bienvenido a esta experiencia interactiva.",
-            "Tienes la tarea de recuperar un expediente corrupto, has de resolver acertijos para hacerlo",
-            "De dudar de la respuesta, el sistema es capaz de ayudarte con el comando /pista",  
+            { text: "<KROS> Bienvenido, agente.", color: "orange"},
+            { text: "<KROS> Uno de nuestros servidores fue atacado e intervenido por la organizacion A.N.S", color: "orange" },
+            { text: "<KROS> En este servidor, se encuentra un expediente secreto que has de recuperar.", color: "orange" },
+            { text: "<KROS> No sera facil de descifrar, pero por algo te llamamos a ti.", color: "orange" },
+            { text: "<KROS> Si tienes alguna duda, podemos ayudarte, tan solo has de usar el comando /pista.", color: "orange" },
+            { text: "<KROS> Eres la ultima esperanza, contamos contigo.", color: "orange" }, 
+            { text: weNeedYou, color: "orange" },
             { text: bootup, color: "#B027F5" },
             { text: "SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
             { text: "ERROR: Servidor no encontrado.", color: "red" },
-            { text: "Intentando cargar respaldo...", color: "red" },
-            { text: ".", color: "red" },
-            { text: "..", color: "red" },
-            { text: "...", color: "red" },
-            { text: "Inicializando asistente IA.", color: "#B027F5" },
-            "<IA> Usted ha activado a Kurios IA, su herramienta de reparacion.",
-            "<IA> Solo para confirmar, es usted un hacker?"
+            { text: "Buscando soluciones...", color: "red" },
+            { text: "██ 39%", color: "white" },
+            { text: "███ 49%", color: "white" },
+            { text: "████ 76%", color: "white" },
+            { text: "█████ 89%", color: "white" },
+            { text: "██████ 100%", color: "white" },
+            { text: "Inicializando asistente IA.", color: "white" },
+            { text: "<IA> Hola! Soy Kurios IA, tu asistente Kurios personal diseñado para ayudarte en cualquier ocasion.", color: "white" },
+            { text: "<IA> Para evitar el uso incorrecto de mis capacidades, hemos implementado un sistema de verificacion.", color: "white" },
+            { text: "<IA> Es usted un hacker?", color: "white" },
         ],
         answer: "no",
-        hint: "Has de responder con tu verdad."
+        hint: "Para completar esta operacion, no debes revelar tu identidad."
     },
     2: {
         dialogs: [
-            "<IA> Perfecto!",
-            "<IA> Revisare ahora que esta fallando, por favor espere.",
-            { text: "ERROR: Creemos que quizas si eres un hacker", color: "red" },
-            { text: "Para confirmar tu identidad, responda con cuantos objetos usted vea usualmente.", color: "red" },
+            { text: "<IA> Perfecto! Usted es todo un operador certificado.", color: "white" },
+            { text: "<IA> Detecto un fallo en la seguridad del sistema.", color: "white" },
+            { text: "<IA> Empezare a arreglarlo.", color: "white" },
+            { text: "Error: 待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。", color: "red" },
+            { text: samurai, color: "red" },
+            { text: "<???> Chamo, no has de continuar este camino. Kurios es nuestro.", color: "red" },
+            { text: "<???> Quien soy?", color: "red" },
+            { text: "<URBZ> Soy URBZ.", color: "red" },
+            { text: "<URBZ> No avanzaras de aca.", color: "red" },
+            { text: "<URBZ> Si deseas avanzar, demuestra tu valia y resuelve mi acertijo.", color: "red" },
+            { text: "<URBZ> Gran honor lleva consigo, de una isla es y un filo es su arma.", color: "red" },
         ],
-        answer: "4",
-        hint: "El escritorio tiene tus respuestas."
+        answer: "samurai",
+        hint: "Aquellos guerreros que morian por su honor."
+    },
+
+    3: {
+        dialogs: [
+            { text: "<URBZ> Veo que conoces bien nuestra cultura.", color: "red" },
+            { text: "<URBZ> Sera divertido verte fallar, nos vemos.", color: "red" },
+            { text: "<KROS> Agente, acabas de hablar con nuestro enemigo principal.", color: "orange" },
+            { text: "<KROS> Por favor, proceda con precaucion.", color: "orange" },
+            { text: "<KROS> Te reconectaremos con la IA.", color: "orange" },
+            { text: "<IA> Cual es mi proposito?", color: "white" },
+            { text: "<IA> Soy solo una maquina?", color: "white" },
+            { text: "<IA> Corrigiendo... El fallo ha sido arreglado.", color: "white" },
+            { text: "<IA> Ya que necesitas desencriptar el expediente, te ayudare.", color: "white" },
+            { text: "<IA> El archivo esta parcialmente encriptado.", color: "white" },
+            { text: "<KROS> Debe haber una respuesta en algun lugar.. revisa tu escritorio.", color: "orange" },
+        ],
+        answer: "vr7!",
+        hint: "Tesoro.exe, Busca algo en imagenes pasadas."
+    },
+
+    4: {
+        dialogs: [
+            "ok ya no tengo nada mas yay",
+            ".",
+            "..",
+            "...",
+            { text: "ERROR: No hay manera de recuperarlo.", color: "red" },
+            { text: "El sistema ahora sera eliminado.", color: "red" },
+            Alien,
+            "..--- ----- ....- -....",
+            { text: "<???> Descifre esto, y le ayudare a recuperar el archivo.", color: "yellow" }
+        ],
+        answer: "2046",
+        hint: "Aquel que nada en los mares y rios tiene tu respuesta."
     },
 
 };
@@ -83,7 +216,7 @@ async function typeWriter(text, color = "#00ff41") {
     history.appendChild(line);
     
     // Si es ASCII o texto largo, va volando (0.5ms), si es corto va normal (25ms)
-    const speed = text.length > 500 ? 0.5 : 25;
+    const speed = text.length > 170 ? 0.05 : 10;
     
     for (let i = 0; i < text.length; i++) {
         if (text[i] === '\n') {
@@ -130,6 +263,7 @@ async function handleInput(val) {
     } else if (userAns === p.answer) {
         await typeWriter("> ACCESO NIVEL " + currentLevel + " CONCEDIDO.", "#fff");
         currentLevel++;
+        renderExpediente();
         
         if (puzzles[currentLevel]) {
             setTimeout(() => playLevelSequence(currentLevel), 1000);
@@ -140,6 +274,43 @@ async function handleInput(val) {
         await typeWriter("> ERROR: CREDENCIALES INVÁLIDAS.", "#ff3333");
     }
 }
+
+// Contenido del expediente por niveles
+const expedienteData = {
+    1: "PROYECTO: SAMURAI-X. \nEstado: [ENCRIPTADO]. \nOrigen: Desconocido.",
+    2: "REGISTRO 02: Las máquinas han empezado a replicar el código de honor de los guerreros antiguos.",
+    3: "ADVERTENCIA: La IA Kurios no es un asistente, es un protocolo de contención.",
+    4: "DATOS FINALES: La brecha se abrirá en el año 2046. El código de acceso es el nombre del primer samurái mecánico."
+};
+
+// Función para generar texto aleatorio (simular encriptación)
+function obfuscate(text) {
+    const chars = "ABCDEFGHIJKLMNñOPQRSTUVWXYZ0123456789%$#@&";
+    return text.split('').map(char => char === " " ? " " : chars[Math.floor(Math.random() * chars.length)]).join('');
+}
+
+// Función para actualizar la ventana del expediente
+function renderExpediente() {
+    const container = document.getElementById('expediente-content');
+    container.innerHTML = ""; // Limpiar
+
+    for (let level in expedienteData) {
+        const div = document.createElement('div');
+        if (parseInt(level) < currentLevel) {
+            // Nivel superado: Mostrar texto real
+            div.className = "decrypted-text";
+            div.innerText = `[NIVEL ${level} DESBLOQUEADO]: \n${expedienteData[level]}`;
+        } else {
+            // Nivel no superado: Mostrar basura
+            div.className = "encrypted-text";
+            div.innerText = `[NIVEL ${level} BLOQUEADO]: \n${obfuscate(expedienteData[level])}`;
+        }
+        container.appendChild(div);
+        container.appendChild(document.createElement('hr'));
+    }
+}
+
+
 
 input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !isTyping) {
@@ -155,4 +326,5 @@ input.addEventListener('keydown', (e) => {
 
 window.onload = () => {
     playLevelSequence(1);
+    renderExpediente();
 };

@@ -78,7 +78,7 @@ input {
 
 /* HOVER PUZZLE INSIDE FILE */
 .hidden-hover {
-    color: white; /* Invisible against white background */
+    color: rgba(255, 255, 255, 0); /* Invisible against white background */
     transition: color 0.5s;
     cursor: help;
 }
@@ -97,3 +97,19 @@ input {
     padding: 0 5px;
 }
 
+.encrypted-text {
+    font-family: 'Courier New', monospace;
+    color: #666;
+    background: #e0e0e0;
+    user-select: none;
+    filter: blur(1px); /* Efecto de texto borroso */
+}
+
+.decrypted-text {
+    color: #000;
+    font-weight: bold;
+    border-left: 3px solid #000080;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    animation: scanline 0.2s steps(2) infinite; /* Opcional: efecto de parpadeo al desbloquear */
+}
