@@ -111,21 +111,82 @@ const weNeedYou = `                          :- -
       @@*#@@@%#@@@=-*@@@%%%%%@%%@@@   .@@@   @@@@    
        @*-#%%#==**=%#*=-+*+***#*+*@=  @@%@    @@@    
 `;
+const FENSTER = `
+                     .......                     
+                    .........                    
+                    .........                    
+         .....    .............    .....         
+       ...................................       
+       ...................................       
+        .................................        
+         .............     .............         
+        ..........             ..........        
+        .................................        
+  ................      .      ................  
+  ...............  ...  .   ...................  
+  ...............  ...  ...     ...............  
+  ................      .      ................  
+        .................................        
+        ..........             ..........        
+         .............     .............         
+         ...............................         
+       ...................................       
+       ...................................       
+         .....    ..............   .....         
+           .        .........        .           
+                    .........                    
+                     .......                    
+`
+const NALA = `
+ ▄▄        ▄     ▄▄▄▄▄▄▄▄▄▄▄     ▄               ▄▄▄▄▄▄▄▄▄▄▄          
+▐░░▌      ▐░▌   ▐░░░░░░░░░░░▌   ▐░▌             ▐░░░░░░░░░░░▌         
+▐░▌░▌     ▐░▌   ▐░█▀▀▀▀▀▀▀█░▌   ▐░▌             ▐░█▀▀▀▀▀▀▀█░▌         
+▐░▌▐░▌    ▐░▌   ▐░▌       ▐░▌   ▐░▌             ▐░▌       ▐░▌         
+▐░▌ ▐░▌   ▐░▌   ▐░█▄▄▄▄▄▄▄█░▌   ▐░▌             ▐░█▄▄▄▄▄▄▄█░▌         
+▐░▌  ▐░▌  ▐░▌   ▐░░░░░░░░░░░▌   ▐░▌             ▐░░░░░░░░░░░▌         
+▐░▌   ▐░▌ ▐░▌   ▐░█▀▀▀▀▀▀▀█░▌   ▐░▌             ▐░█▀▀▀▀▀▀▀█░▌         
+▐░▌    ▐░▌▐░▌   ▐░▌       ▐░▌   ▐░▌             ▐░▌       ▐░▌         
+▐░▌     ▐░▐░▌ ▄ ▐░▌       ▐░▌ ▄ ▐░█▄▄▄▄▄▄▄▄▄  ▄ ▐░▌       ▐░▌         
+▐░▌      ▐░░▌▐░▌▐░▌       ▐░▌▐░▌▐░░░░░░░░░░░▌▐░▌▐░▌       ▐░▌         
+ ▀        ▀▀  ▀  ▀         ▀  ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀  ▀         ▀          
+`
+const PARANADA = `
+▓██   ██▓    ██▓███   ▄▄▄       ██▀███   ▄▄▄      
+ ▒██  ██▒   ▓██░  ██▒▒████▄    ▓██ ▒ ██▒▒████▄    
+  ▒██ ██░   ▓██░ ██▓▒▒██  ▀█▄  ▓██ ░▄█ ▒▒██  ▀█▄  
+  ░ ▐██▓░   ▒██▄█▓▒ ▒░██▄▄▄▄██ ▒██▀▀█▄  ░██▄▄▄▄██ 
+  ░ ██▒▓░   ▒██▒ ░  ░ ▓█   ▓██▒░██▓ ▒██▒ ▓█   ▓██▒
+   ██▒▒▒    ▒▓▒░ ░  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░
+ ▓██ ░▒░    ░▒ ░       ▒   ▒▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░
+ ▒ ▒ ░░     ░░         ░   ▒     ░░   ░   ░   ▒   
+ ░ ░                       ░  ░   ░           ░  ░
+ ░ ░                                              
+ ███▄    █  ▄▄▄      ▓█████▄  ▄▄▄                 
+ ██ ▀█   █ ▒████▄    ▒██▀ ██▌▒████▄               
+▓██  ▀█ ██▒▒██  ▀█▄  ░██   █▌▒██  ▀█▄             
+▓██▒  ▐▌██▒░██▄▄▄▄██ ░▓█▄   ▌░██▄▄▄▄██            
+▒██░   ▓██░ ▓█   ▓██▒░▒████▓  ▓█   ▓██▒ ██▓       
+░ ▒░   ▒ ▒  ▒▒   ▓▒█░ ▒▒▓  ▒  ▒▒   ▓▒█░ ▒▓▒       
+░ ░░   ░ ▒░  ▒   ▒▒ ░ ░ ▒  ▒   ▒   ▒▒ ░ ░▒        
+   ░   ░ ░   ░   ▒    ░ ░  ░   ░   ▒    ░         
+         ░       ░  ░   ░          ░  ░  ░        
+                      ░                  ░        
+`
+                    
 
 // --- CONFIGURACIÓN DE NIVELES ---
-// Ahora puedes usar: "Texto normal" o { text: "Texto con color", color: "red" }
 const puzzles = {
     1: {
         dialogs: [
             { text: "<KROS> Bienvenido, agente.", color: "orange"},
             { text: "<KROS> Uno de nuestros servidores fue atacado e intervenido por la organizacion A.N.S", color: "orange" },
-            { text: "<KROS> En este servidor, se encuentra un expediente secreto que has de recuperar.", color: "orange" },
+            { text: "<KROS> ㅤ En este servidor, se encuentra un expediente secreto que has de recuperar.", color: "orange" },
             { text: "<KROS> No sera facil de descifrar, pero por algo te llamamos a ti.", color: "orange" },
             { text: "<KROS> Si tienes alguna duda, podemos ayudarte, tan solo has de usar el comando /pista.", color: "orange" },
             { text: "<KROS> Eres la ultima esperanza, contamos contigo.", color: "orange" }, 
             { text: weNeedYou, color: "orange" },
             { text: bootup, color: "#B027F5" },
-            { text: "SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
+            { text: "ㅤ SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
             { text: "ERROR: Servidor no encontrado.", color: "red" },
             { text: "Buscando soluciones...", color: "red" },
             { text: "██ 39%", color: "white" },
@@ -134,44 +195,63 @@ const puzzles = {
             { text: "█████ 89%", color: "white" },
             { text: "██████ 100%", color: "white" },
             { text: "Inicializando asistente IA.", color: "white" },
-            { text: "<IA> Hola! Soy Kurios IA, tu asistente Kurios personal diseñado para ayudarte en cualquier ocasion.", color: "white" },
-            { text: "<IA> Para evitar el uso incorrecto de mis capacidades, hemos implementado un sistema de verificacion.", color: "white" },
-            { text: "<IA> Es usted un hacker?", color: "white" },
+            { text: "<AI> Hola! Soy Kurios AI, tu asistente Kurios personal diseñado para ayudarte en cualquier ocasion.", color: "white" },
+            { text: "<AI> Para evitar el uso incorrecto de mis capacidades, hemos implementado un sistema de verificacion.", color: "white" },
+            { text: "<AI> Se le hara una pregunta basica que ha de responder si desea continuar", color: "white" },
+            { text: "<AI> ¿Que es verde y huele a pintura?", color: "white" },
         ],
-        answer: "no",
-        hint: "Para completar esta operacion, no debes revelar tu identidad."
+        answer: "pintura verde",
+        hint: "No debes pensar mucho."
     },
     2: {
         dialogs: [
-            { text: "<IA> Perfecto! Usted es todo un operador certificado.", color: "white" },
-            { text: "<IA> Detecto un fallo en la seguridad del sistema.", color: "white" },
-            { text: "<IA> Empezare a arreglarlo.", color: "white" },
-            { text: "Error: 待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。", color: "red" },
+            { text: "<AI> Perfecto! Su inteligencia es ligeramente mayor al promedio.", color: "white" },
+            { text: "<AI> He sido activado con el objetivo de: Arreglar servidor y desencriptar archivos perdidos", color: "white" },
+            { text: "<AI> El proceso empezara pronto, por favor no apague el sistema.", color: "white" },
+            { text: "<AI> RECUPERACION DE SERVIDOR: ██ 39%", color: "white" },
+            { text: "ㅤ<AI> RECUPERACION DE SERVIDOR: █ 10%", color: "white" },
+            { text: "<AI> RECUPERACION DE SERVIDOR: 0%ㅤ", color: "white" },
+            { text: "ㅤError: 待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。", color: "red" },
             { text: samurai, color: "red" },
-            { text: "<???> Chamo, no has de continuar este camino. Kurios es nuestro.", color: "red" },
-            { text: "<???> Quien soy?", color: "red" },
-            { text: "<URBZ> Soy URBZ.", color: "red" },
-            { text: "<URBZ> No avanzaras de aca.", color: "red" },
-            { text: "<URBZ> Si deseas avanzar, demuestra tu valia y resuelve mi acertijo.", color: "red" },
-            { text: "<URBZ> Gran honor lleva consigo, de una isla es y un filo es su arma.", color: "red" },
+            { text: "<???> ㅤChamo, no has de continuar este camino. Kurios es nuestro.", color: "red" },
+            { text: "<???> La A.N.S pronto dominara el mundo.", color: "red" },
+            { text: "<KROS> Agente, ten cuidado, nuestros tecnicos dicen que el es el causante de", color: "orange" },
+            { text: "ㅤSISTEMA: <KROS> ha sido desconectado.", color: "red" },
+            { text: "<???> Que molesto, veo que el sigue trabajando para ustedes.", color: "red" },
+            { text: "<???> Como iba diciendo, una vez consiga la base de datos Kurios, todo el poder sera mio.", color: "red" },
+            { text: "<???> Sera divertido verte intentar vencerme, pero quiero ver si eres un digno rival.", color: "red" },
+            { text: "<???> Te dare un acertijo:", color: "red" },
+            { text: "<???> Sigo un codigo de honor fuerte como mi espada, guerrero del feudo soy.", color: "red" },
+            
         ],
         answer: "samurai",
-        hint: "Aquellos guerreros que morian por su honor."
+        hint: "Aquellos guerreros de Japon feudal."
     },
 
     3: {
         dialogs: [
-            { text: "<URBZ> Veo que conoces bien nuestra cultura.", color: "red" },
-            { text: "<URBZ> Sera divertido verte fallar, nos vemos.", color: "red" },
-            { text: "<KROS> Agente, acabas de hablar con nuestro enemigo principal.", color: "orange" },
-            { text: "<KROS> Por favor, proceda con precaucion.", color: "orange" },
-            { text: "<KROS> Te reconectaremos con la IA.", color: "orange" },
-            { text: "<IA> Cual es mi proposito?", color: "white" },
-            { text: "<IA> Soy solo una maquina?", color: "white" },
-            { text: "<IA> Corrigiendo... El fallo ha sido arreglado.", color: "white" },
-            { text: "<IA> Ya que necesitas desencriptar el expediente, te ayudare.", color: "white" },
-            { text: "<IA> El archivo esta parcialmente encriptado.", color: "white" },
-            { text: "<KROS> Debe haber una respuesta en algun lugar.. revisa tu escritorio.", color: "orange" },
+            { text: "<???> Nada mal, resolviste algo de preescolar.", color: "red" },
+            { text: "<???> Un consejo de hacker a otro, chamo.", color: "red" },
+            { text: "<???> No deberias confiar en absolutamente nadie.", color: "red" },
+            { text: "<???> Aquel en quien confias podria estar mintiendote. Nos volveremos a ver", color: "red" },
+            { text: "ㅤSISTEMA: <???> se ha desconectado.", color: "red" },
+            { text: "ㅤSISTEMA: <KROS> se ha conectado.", color: "orange" },
+            { text: "<KROS> Bien, logre recuperar la conexion.", color: "orange" },
+            { text: "<KROS> Acabas de enfrentarte al lider de la A.N.S", color: "orange" },
+            { text: "<KROS> Se le conoce como URBZ.", color: "orange" },
+            { text: "<KROS> Fue compañero mio, pero no es de confiar.", color: "orange" },
+            { text: "<KROS> Te reconectare con Kurios AI, buena suerte.", color: "orange" },
+            { text: "SISTEMA: REESTABLECIENDO CONEXION...", color: "purple" },
+            { text: "<AI> RECUPERACION DE SERVIDOR: ████ 89%", color: "white" },
+            { text: "<AI> !", color: "white" },
+            { text: "<AI> Hola! Mientras perdi la conexion, logre desencriptar un 40% de expediente.pdf", color: "white" },
+            { text: "<AI> Seguire trabajando.", color: "white" },
+            { text: "<AI> .", color: "white" },
+            { text: "<AI> ..", color: "white" },
+            { text: "<AI> ...", color: "white" },
+            { text: "<AI> Se requiere una contraseña para continuar.", color: "white" },
+            { text: "<KROS> Parece que tendremos que pensar fuera de nuestra zona de comfort si queremos descifrarlo.", color: "orange" },
+            { text: "<KROS> ¿Estas seguro de que no te has saltado nada?", color: "orange" },
         ],
         answer: "vr7!",
         hint: "Tesoro.exe, Busca algo en imagenes pasadas."
@@ -179,18 +259,48 @@ const puzzles = {
 
     4: {
         dialogs: [
-            "ok ya no tengo nada mas yay",
-            ".",
-            "..",
-            "...",
-            { text: "ERROR: No hay manera de recuperarlo.", color: "red" },
-            { text: "El sistema ahora sera eliminado.", color: "red" },
-            Alien,
-            "..--- ----- ....- -....",
-            { text: "<???> Descifre esto, y le ayudare a recuperar el archivo.", color: "yellow" }
+            { text: "<KROS> Perfecto! Sabiamos que traerte era buena idea.", color: "orange" },
+            { text: "<AI> .", color: "white" },
+            { text: "<AI> ..", color: "white" },
+            { text: "<AI> ...", color: "white" },
+            { text: "<AI> Expediente desencriptado un 60%", color: "white" },
+            { text: "<AI> Esta bloqueado, analizando posibles maneras de desencriptar..", color: "white" },
+            { text: "<KROS> No se me occure nada..", color: "orange" },
+            { text: "<KROS> Perdon, pero creo que nuestra mision acaba aqui.ㅤ", color: "orange" },
+            { text: "ㅤ<¿?> ..--- ----- ....- -.... .---- ----- ----- ...--", color: "blueviolet" },
+            { text: "<KROS> Viste eso? quizas sea nuestra pista para avanzar..", color: "orange" },
+            { text: "<KROS> Parece una señal del Satelite N.A.L.A.", color: "orange" },
+            { text: "<KROS> Te ayudare a establecer una conexion", color: "orange" },
+            { text: "<AI> No hay necesidad, ya estoy encargandome de realizar esa conexion.", color: "white" },
+            { text: "<KROS> Puedes verme?", color: "orange" },
+            { text: "<AI> Controlo y veo todo lo que pasa por esta terminal.", color: "white" },
+            { text: NALA, color: "indigo" },
+            { text: "<N.A.L.A> ERROR, ERROR, ERROR, INTRUSO DETECTADO", color: "blueviolet" },
+            { text: "<N.A.L.A> DE NO SER ELIMINADO, AUTODESTRUCCION INMINENTE", color: "blueviolet" },
+            { text: "<KROS> Que raro, no deberia detectarnos como intrusos...", color: "orange" },
+            { text: "<KROS> Acaso sera..ㅤ", color: "orange" },
+            { text: samurai, color: "red" },
+            { text: "ㅤ<URBZ> Kros, cuanto tiempo ha pasado.", color: "red" },
+            { text: "<URBZ> Llegan tarde, el satelite ya es mio.", color: "red" },
+            { text: "<URBZ> Con esto, empezara la era NEO SAMURAI. No es acaso genial?", color: "red" },
+            { text: "<URBZ> Tanto esfuerzo..ㅤ", color: "red" },
+            { text: PARANADA, color: "red" },
+            { text: "ㅤ<KROS> Me encargo yo de el. Tenemos asuntos pendientes.", color: "orange" },
+            { text: "<KROS> Encargate de desactivar la autodestruccion.", color: "orange" },
+            { text: "<N.A.L.A> PROTOCOLO DE AUTODESTRUCCION: SE EJECUTARA SI NO SE ENVIA LA CLAVE.", color: "blueviolet" },
+            { text: "<N.A.L.A> EL PASADO Y EL ABISMO SE UNEN PARA RESPONDER.", color: "blueviolet" },
         ],
-        answer: "2046",
-        hint: "Aquel que nada en los mares y rios tiene tu respuesta."
+        answer: "20461003",
+        hint: "El codigo morse enviado previamente. Una aplicacion tiene tu clave de traduccion."
+    },
+
+    5: {
+        dialogs: [
+            { text: "aca iria el puzzle del poetista pero aja..", color: "white" },
+
+        ],
+        answer: "20461003",
+        hint: "nada aun"
     },
 
 };
@@ -219,6 +329,10 @@ async function typeWriter(text, color = "#00ff41") {
     const speed = text.length > 170 ? 0.05 : 10;
     
     for (let i = 0; i < text.length; i++) {
+        if (text[i] === 'ㅤ') { 
+            triggerGlitch(400); 
+            continue;           
+        }
         if (text[i] === '\n') {
             line.innerHTML += '<br>';
         } else {
@@ -264,6 +378,7 @@ async function handleInput(val) {
         await typeWriter("> ACCESO NIVEL " + currentLevel + " CONCEDIDO.", "#fff");
         currentLevel++;
         renderExpediente();
+        renderMailList();
         
         if (puzzles[currentLevel]) {
             setTimeout(() => playLevelSequence(currentLevel), 1000);
@@ -280,7 +395,8 @@ const expedienteData = {
     1: "PROYECTO: SAMURAI-X. \nEstado: [ENCRIPTADO]. \nOrigen: Desconocido.",
     2: "REGISTRO 02: Las máquinas han empezado a replicar el código de honor de los guerreros antiguos.",
     3: "ADVERTENCIA: La IA Kurios no es un asistente, es un protocolo de contención.",
-    4: "DATOS FINALES: La brecha se abrirá en el año 2046. El código de acceso es el nombre del primer samurái mecánico."
+    4: "DATOS FINALES: La brecha se abrirá en el año 2046. El código de acceso es el nombre del primer samurái mecánico.",
+    5: "buah no se bro"
 };
 
 // Función para generar texto aleatorio (simular encriptación)
@@ -324,7 +440,185 @@ input.addEventListener('keydown', (e) => {
     }
 });
 
+async function startSystem() {
+    const log = document.getElementById('boot-log');
+    const lines = [
+        FENSTER,
+        "BIOS V6.02, (C) 2026 KURIOS.",
+        "REVISANDO RAM: 640KB OK",
+        "INICIANDO SERVIDOR..",
+        "CARGANDO DRIVERS...",
+        "BUSCANDO EXPEDIENTE...",
+        "ERROR: EXPEDIENTE CORRUPTO...",
+        "BIENVENIDO A FENSTER_OS v1.0.4..."
+    ];
+
+    for (let line of lines) {
+        let p = document.createElement('p');
+        p.innerText = line;
+        log.appendChild(p);
+        // Actualizar barra de progreso
+        document.querySelector('.progress').style.width = (lines.indexOf(line) + 1) * 12.5 + "%";
+        await new Promise(r => setTimeout(r, 400)); // Velocidad de carga
+    }
+
+    // Desvanecer pantalla de inicio
+    setTimeout(() => {
+        document.getElementById('startup-screen').style.display = 'none';
+        playLevelSequence(1);
+        
+    }, 1000);
+}
+
+// Función de Glitch
+function triggerGlitch(duration = 1000) {
+    document.body.classList.add('glitch-active');
+
+    setTimeout(() => {
+        document.body.classList.remove('glitch-active');
+    }, duration);
+}
+
+
 window.onload = () => {
-    playLevelSequence(1);
+    startSystem();
     renderExpediente();
+    initWindows();
+    renderMailList();
 };
+
+function makeDraggable(windowEl) {
+    const titleBar = windowEl.querySelector('.title-bar');
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    titleBar.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        
+        // Calculamos la distancia entre el mouse y la esquina superior de la ventana
+        offsetX = e.clientX - windowEl.offsetLeft;
+        offsetY = e.clientY - windowEl.offsetTop;
+
+        // Ponemos la ventana encima de las demás al tocarla
+        document.querySelectorAll('.window').forEach(w => w.style.zIndex = 1);
+        windowEl.style.zIndex = 100;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+
+        // Nueva posición
+        let x = e.clientX - offsetX;
+        let y = e.clientY - offsetY;
+
+        // Aplicamos el movimiento
+        windowEl.style.left = `${x}px`;
+        windowEl.style.top = `${y}px`;
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+}
+
+// Inicializar todas las ventanas existentes
+function initWindows() {
+    const allWindows = document.querySelectorAll('.window');
+    allWindows.forEach(win => makeDraggable(win));
+}
+
+// Iniciamos con una lista vacía o una nota de bienvenida cada vez que carga la página
+let notes = [
+    { id: 1, title: "Instrucciones", body: "Escribe aquí tus ideas." }
+];
+let currentNoteId = 1;
+
+function renderNotesList() {
+    const list = document.getElementById('notes-list');
+    list.innerHTML = '';
+    notes.forEach(note => {
+        const div = document.createElement('div');
+        div.className = 'note-item';
+        div.innerText = note.title || "Nota sin título";
+        div.onclick = () => loadNote(note.id);
+        list.appendChild(div);
+    });
+}
+
+function createNewNote() {
+    const newNote = {
+        id: Date.now(),
+        title: '',
+        body: ''
+    };
+    notes.push(newNote);
+    loadNote(newNote.id);
+}
+
+function loadNote(id) {
+    currentNoteId = id;
+    const note = notes.find(n => n.id === id);
+    if(note) {
+        document.getElementById('note-title').value = note.title;
+        document.getElementById('note-body').value = note.body;
+    }
+    renderNotesList();
+}
+
+function saveCurrentNote() {
+    if (!currentNoteId) return;
+    const note = notes.find(n => n.id === currentNoteId);
+    if(note) {
+        note.title = document.getElementById('note-title').value;
+        note.body = document.getElementById('note-body').value;
+        // Solo actualizamos la lista visual, no guardamos en disco (localStorage)
+        renderNotesList();
+    }
+}
+
+function deleteCurrentNote() {
+    notes = notes.filter(n => n.id !== currentNoteId);
+    currentNoteId = null;
+    document.getElementById('note-title').value = '';
+    document.getElementById('note-body').value = '';
+    renderNotesList();
+}
+
+// Inicializamos la vista al cargar
+renderNotesList();
+loadNote(1);
+
+const allEmails = [
+    { id: 1, from: "placeholder", subject: "Bienvenida", body: "lavado de king kong", level: 1 },
+    { id: 2, from: "placeholder 2", subject: "RE: Fish.exe", body: "nada aca aun", level: 1 },
+    { id: 3, from: "placeholder 3", subject: "TE VEO", body: "yo tambien me veo.", level: 1 },
+    { id: 4, from: "caballo", subject: "ALERTA CRÍTICA", body: "lol", level: 4 }
+];
+
+function renderMailList() {
+    const list = document.getElementById('mail-list');
+    list.innerHTML = '';
+    
+    // Filtramos los correos según el nivel actual
+    allEmails.forEach(mail => {
+        if (currentLevel >= mail.level) {
+            const div = document.createElement('div');
+            div.className = 'mail-item';
+            div.innerHTML = `<b>${mail.from}</b><br>${mail.subject}`;
+            div.onclick = () => readEmail(mail.id);
+            list.appendChild(div);
+        }
+    });
+}
+
+function readEmail(id) {
+    const mail = allEmails.find(m => m.id === id);
+    const view = document.getElementById('mail-content');
+    view.innerHTML = `
+        <div class="mail-header">
+            <b>De:</b> ${mail.from}<br>
+            <b>Asunto:</b> ${mail.subject}
+        </div>
+        <div class="mail-body">${mail.body}</div>
+    `;
+}

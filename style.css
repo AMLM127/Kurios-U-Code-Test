@@ -54,6 +54,8 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
+    cursor: move;
+    user-select: none;
 }
 
 .window-content {
@@ -95,6 +97,7 @@ input {
     display: flex;
     align-items: center;
     padding: 0 5px;
+    
 }
 
 .encrypted-text {
@@ -112,4 +115,166 @@ input {
     padding-left: 10px;
     margin-bottom: 15px;
     animation: scanline 0.2s steps(2) infinite; /* Opcional: efecto de parpadeo al desbloquear */
+}
+
+.notepad-container {
+    display: flex;
+    height: 300px;
+    background: #fff;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.notepad-sidebar {
+    width: 120px;
+    border-right: 2px solid #ccc;
+    background: #f0f0f0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.notepad-sidebar button {
+    cursor: pointer;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+.note-item {
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note-item:hover { background: #e0e0e0; }
+
+.notepad-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+    background-size: 100% 24px; /* Efecto líneas de cuaderno */
+    line-height: 24px;
+}
+
+#note-title {
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+    background: transparent;
+}
+
+#note-body {
+    flex: 1;
+    border: none;
+    resize: none;
+    outline: none;
+    background: transparent;
+    line-height: 24px;
+}
+
+.delete-btn {
+    align-self: flex-end;
+    background: #ff4444;
+    color: white;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.mail-container {
+    display: flex;
+    height: 350px;
+    background: #fff;
+    color: #000;
+}
+
+.mail-sidebar {
+    width: 180px;
+    border-right: 2px solid #808080;
+    background: #d0d0d0;
+    overflow-y: auto;
+}
+
+.mail-item {
+    padding: 5px;
+    border-bottom: 1px solid #808080;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.mail-item:hover { background: #000080; color: white; }
+
+.mail-view {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    font-family: 'Times New Roman', serif;
+    background: #fdfdfd;
+}
+
+.mail-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+#startup-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    z-index: 10000; /* Siempre encima de todo */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#boot-log {
+    flex: 1;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.loader-bar {
+    width: 100%;
+    height: 4px;
+    background: #222;
+    margin-top: 10px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #00ff00;
+    transition: width 0.5s;
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(0); filter: hue-rotate(0deg); }
+    20% { transform: translate(-5px, 5px); filter: hue-rotate(90deg) brightness(1.5); }
+    40% { transform: translate(5px, -5px); clip-path: inset(10% 0 30% 0); }
+    60% { transform: translate(-10px, 0); filter: sepia(1) saturate(5); }
+    80% { transform: translate(10px, 5px); clip-path: inset(40% 0 10% 0); }
+    100% { transform: translate(0); filter: hue-rotate(0deg); }
+}
+
+.glitch-active {
+    animation: glitch-anim 0.2s infinite;
+    overflow: hidden;
 }

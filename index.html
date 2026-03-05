@@ -2,26 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>LegacyOS - Recovery Mode</title>
+    <title>FENSTER OS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="startup-screen">
+        <div id="boot-log"></div>
+        <div class="loader-bar"><div class="progress"></div></div>
+    </div>
+   
     <div id="desktop">
         <div class="icon" onclick="openWindow('terminal-win')">
             <div class="icon-img">📟</div>
-            <span>Terminal</span>
+            <span>Terminal.cmd</span>
         <div class="icon" onclick="openWindow('expediente-win')">
             <div class="icon-img">📂</div>
             <span>Expediente.pdf</span>
         </div>
         </div>
-        <div class="icon" onclick="openWindow('notes-win')">
+        <div class="icon" onclick="openWindow('notas')">
             <div class="icon-img">📝</div>
             <span>Notas.txt</span>
-        </div>
-        <div class="icon" onclick="openWindow('hint-win')">
-            <div class="icon-img">💡</div>
-            <span>Pistas.exe</span>
         </div>
         <div class="icon" onclick="openWindow('fish')">
             <div class="icon-img">🐟</div>
@@ -30,6 +31,10 @@
         <div class="icon" onclick="openWindow('mapa')">
             <div class="icon-img">📊</div>
             <span>Tesoro.exe</span>
+        </div>
+        <div class="icon" onclick="openWindow('mail')">
+            <div class="icon-img">📫</div>
+            <span>Correo.exe</span>
         </div>
 
         <div id="terminal-win" class="window" style="display: block; top: 50px; left: 50px;">
@@ -46,18 +51,21 @@
             </div>
         </div>
 
-        <div id="notes-win" class="window" style="display: none; top: 100px; left: 300px;">
+        <div id="notas" class="window" style="display: none; top: 50px; left: 50px; width: 400px;">
             <div class="title-bar">
-                <div class="title">Notas.txt</div>
-                <button class="close" onclick="closeWindow('notes-win')">X</button>
+                <div class="title">NOTAS.EXE</div>
+                <button class="close" onclick="closeWindow('notas')">X</button>
             </div>
-            <div class="window-content file-body">
-                <p>Notas de Aaram:</p>
-                <p>1. Hola</p>
-                <p>2. Abajo de todo esto esta el elemento hover!!.</p>
-                <p>3. Tambien esta este texto: <b>HOLA</b></p>
-                <hr>
-                <p class="hidden-hover">Cuenta la leyenda, que la faccion de Samurais se enfrento a la faccion de las Maquinas hace siglos.</p>
+            <div class="window-content notepad-container">
+                <div class="notepad-sidebar">
+                    <button onclick="createNewNote()">+ Nueva</button>
+                    <div id="notes-list"></div>
+                </div>
+                <div class="notepad-editor">
+                    <input type="text" id="note-title" placeholder="Título..." oninput="saveCurrentNote()">
+                    <textarea id="note-body" placeholder="Escribe algo chévere..." oninput="saveCurrentNote()"></textarea>
+                    <button class="delete-btn" onclick="deleteCurrentNote()">Eliminar Nota</button>
+                </div>
             </div>
         </div>
 
@@ -67,7 +75,7 @@
                 <button class="close" onclick="closeWindow('expediente-win')">X</button>
             </div>
             <div class="window-content file-body" id="expediente-content">
-                 </div>
+            </div>
         </div>
 
         <div id="mapa" class="window" style="display: none; top: 200px; left: 100px;">
@@ -85,6 +93,20 @@
                     D R s 5 @
                     </p>
                 </pre>
+            </div>
+        </div>
+
+        <div id="mail" class="window" style="display: none; top: 80px; left: 400px; width: 500px;">
+            <div class="title-bar">
+                <div class="title">Bandeja de Entrada - Correo.exe</div>
+                <button class="close" onclick="closeWindow('mail')">X</button>
+            </div>
+            <div class="window-content mail-container">
+                <div class="mail-sidebar" id="mail-list">
+                    </div>
+                <div class="mail-view" id="mail-content">
+                    <p style="color: #666; text-align: center; margin-top: 50px;">Selecciona un correo para leer</p>
+                </div>
             </div>
         </div>
         
