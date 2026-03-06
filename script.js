@@ -172,6 +172,38 @@ const PARANADA = `
          ░       ░  ░   ░          ░  ░  ░        
                       ░                  ░        
 `
+const DOG = `
+@@@@%*=:..............:::---=----========+===-:::::-=+#@#
+@@@%#=............:...::--=++**++++==-====--*+=-:...:-=##
+%%#*-...............:=*##%%@@@@@@@@@@@%#+=:-*=+=-:::.::-*
+*+-..............:-=**####%@@@%%%%%@@@@@@%+=+=++==-:::::-
+...............-+++*##%%%#%@@@%%%%%%@@@@@@@%+=*+===-:----
+.............:-==++*#%@@@@@@@@@%%@@@@@@@@@@@@@#+====-:-++
+..........:==-==+**#%@@@@@@@@@@%@@@@@@@@@@@@@@@*+===---=@
+..........-=--=*####%@@@@@@@@@@@@@@@@@@@@@@@@@@%*+==--=*%
+.........:=--=*******#%@@@@@@@@@@@@@@@@@@@@@@@@%%@#=---=*
+.........-=--+**+----+*#%@@@@@@@@@@@%@@@@@@@@@@@%@@#=---=
+........:==-==-......:=#%@@@@@@@@@@@@%%==--+#@@@%%@%+=--=
+........-=--=-.....:--*%@@@@@@@@@@@@@**+--==:*@@##@@#*+=+
+.......:-=-:=-:...::-*@@@@@@@@@@@@@@@@%---=+==@@*+%@@%#++
+......::-=::==-:..:=*@@@@@@@@@@@@@@@@@@#*+=*+%@@*+%@@@#**
+.....:::---:=+====+#@@@@@@@@@@@@@@@@@@@@*+##@@@@*+%@@@%#*
+.....::::--::+++++#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++@@@@@#*
+....:::::-=-:=+++#@@@@#-:::---=+*@@@@@@@@@@@@@@@=#@@@@@%#
+...::::::::-::++*%@@@*-:..::::-=+#@@@@@@@@@@@@@*+%@@@@@@#
+..:-:::::::--:+*#@@@%=:....::::.:=#@@@@@@@@@@@*+%@@@@@@@@
+.:--:::::::---=*%@@%#+:.....:-=::=%@@@@@@@@@@++%@@@@@@@@@
+.-=-:::::::-=--*@@@%%#+:.....:=++#@@@@@@@@@@@=%@@@@@@@@%@
+.:---:::::::--:*@@@@@%#+-::::::-+@@@@@@@@@@@*%@@@@@@@%#%@
+..:-=--:..::---*%@@@@%##*+=::-+*%@@@@@@@@@@@*@@@@@@@#*#@@
+.....:=::::-=--#%%@@%#####*+++*#%@@@@@@@@@@@#@@@@@@#+#@@@
+......:--:::--+%%%%%#####*+-=+*#%@@@@@@@@@@@#@@@@@%+#@%##
+........-----==#%%%####**+===++*#%@@@@@@@@@@#@@@@@##@#+*#
+.........:-=-==+#%%#**#%%%@%@@@@@@@@@@@@@@@%#@@@@@@@+-=*#
+...........:-=+=.:*%@%%%@@@@@@@@@@@@@@@@@%#**%@@@@#::-=+*
+.............-*=::=*###%@@@@@@@@@@@@@@@@%#%#%%@@@+..:-=+*
+.............--=+#%@@@@@@%%@@@@%%@@@@@%%@@@@@@@@@#..::-+*
+`
                     
 
 // --- CONFIGURACIÓN DE NIVELES ---
@@ -274,7 +306,8 @@ const puzzles = {
             { text: "<AI> No hay necesidad, ya estoy encargandome de realizar esa conexion.", color: "white" },
             { text: "<KROS> Puedes verme?", color: "orange" },
             { text: "<AI> Controlo y veo todo lo que pasa por esta terminal.", color: "white" },
-            { text: NALA, color: "indigo" },
+            { text: DOG, color: "blueviolet" },
+            { text: NALA, color: "blueviolet" },
             { text: "<N.A.L.A> ERROR, ERROR, ERROR, INTRUSO DETECTADO", color: "blueviolet" },
             { text: "<N.A.L.A> DE NO SER ELIMINADO, AUTODESTRUCCION INMINENTE", color: "blueviolet" },
             { text: "<KROS> Que raro, no deberia detectarnos como intrusos...", color: "orange" },
@@ -373,7 +406,7 @@ async function handleInput(val) {
     const userAns = val.toLowerCase().trim();
 
     if (userAns === '/pista') {
-        await typeWriter("SISTEMA: " + p.hint, "#ffae00");
+        await typeWriter("<KROS>: " + p.hint, "#ffae00");
     } else if (userAns === p.answer) {
         await typeWriter("> ACCESO NIVEL " + currentLevel + " CONCEDIDO.", "#fff");
         currentLevel++;
@@ -392,11 +425,11 @@ async function handleInput(val) {
 
 // Contenido del expediente por niveles
 const expedienteData = {
-    1: "PROYECTO: SAMURAI-X. \nEstado: [ENCRIPTADO]. \nOrigen: Desconocido.",
-    2: "REGISTRO 02: Las máquinas han empezado a replicar el código de honor de los guerreros antiguos.",
-    3: "ADVERTENCIA: La IA Kurios no es un asistente, es un protocolo de contención.",
-    4: "DATOS FINALES: La brecha se abrirá en el año 2046. El código de acceso es el nombre del primer samurái mecánico.",
-    5: "buah no se bro"
+    1: "KURIOS EDUCATION. \nEstado: [ENCRIPTADO]. \nOrigen: Desconocido.",
+    2: "REGISTRO 01: 20-07-2022 Tecnikid Venezuela se transforma en Kurios en 2022. Fui un miembro fundador.",
+    3: "REGISTRO 02: 05-08-2023, Creación de Kurios AI consiguiendo las respuestas esperadas, es mi proyecto más ambicioso.",
+    4: "REGISTRO 03: 12-05-2024, KROS empezo su nueva versión de Kurios AI, sospecho que lo hace para desplazarme.",
+    5: "REGISTRO 04: 30-08-2025, Fui despedido de Kurios. No sabían ni saben lo que perdieron y lo que van a necesitar. VOY A VOLVER, COMIENZA LA GRAN ERA DE LOS SAMURAIS."
 };
 
 // Función para generar texto aleatorio (simular encriptación)
@@ -591,13 +624,13 @@ loadNote(1);
 const allEmails = [
     { id: 1, from: "MUSCLE GUY", subject: "COMPRA YA", body: "COMPRA NUESTROS PRODUCTOS!!! OSSHA NO SIRVE!!! comprayaestacosa.com", level: 1 },
     { id: 2, from: "SUPERANTISPYWARE", subject: "DESCARGAR ANTISPYWARE", body: "SU DESPOSITIVO TIENE VIRUS, DESCARGUE YA SUPERANTISPYWARE PRO Y OBTENGA TODAS LAS MEJORAS", level: 1 },
-    { id: 3, from: "POETI", subject: "Te extraño.", body: "Vi que estabas en linea, aun necesitas el codigo de la ultima vez? Ya te lo habia enviado de manera ACROSTICO, me lo crees? ;)", level: 4 },
+    { id: 3, from: "POETI", subject: "Te extraño.", body: "Vi que estabas en línea, aún necesitas el código de la última vez? Ya te lo había enviado de manera ACRÓSTICO, me lo crees? ;)", level: 4 },
     { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich.", body: "La leyenda cuenta que el Conde de Sandwich pasaba horas, a veces hasta 24 horas seguidas, jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrumpir su juego lo llevó a buscar una solución práctica. Pidió un trozo de roast carne asada colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias, esta solución fue como encontrar un TESORO.", level: 3 },
-    { id: 5, from: "POETI 1", subject: "Water Jet", body: "El Derbi del Hipodromo la Rinconada sucedio de manera estrepitosamente interesante, el CABALLO Water Jet supero expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
+    { id: 5, from: "POETI 1", subject: "Water Jet", body: "El Derbi del Hipódromo la Rinconada sucedió de manera estrepitosamente interesante, el CABALLO Water Jet superó expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
     { id: 6, from: "POETI 2", subject: "URBZ", body: "Hay rumores de que nuestro mayor enemigo en esta vida, URBZ trabaja en una Escuela como profesor, me lo crees? ;) ;)", level: 1 },
-    { id: 7, from: "POETI 3", subject: "OSSHA", body: "Compre 500 galones de OSSHA, porque me estaban diciendo que la oficina estaba muy sucia y que eran los mejores productos de Limpieza, me lo crees? ;) ;)", level: 1 },
-    { id: 8, from: "POETI 4", subject: "Semillas", body: "Me ahogue con una semilla de Durazno que estaba en el Te Lipton, me lo crees? ;) ;)", level: 1 },
-    { id: 9, from: "POETI 5", subject: "Estrellas", body: "Por fin cumpli mi sueno de ser Astronauta, y pude visitar a N.A.L.A, me lo crees? ;) ;)", level: 1 },
+    { id: 7, from: "POETI 3", subject: "OSSHA", body: "Compré 500 galones de OSSHA, porque me estaban diciendo que la oficina estaba muy sucia y que eran los mejores productos de Limpieza, me lo crees? ;) ;)", level: 1 },
+    { id: 8, from: "POETI 4", subject: "Semillas", body: "Me ahogué con una semilla de Durazno que estaba en el Te Lipton, me lo crees? ;) ;)", level: 1 },
+    { id: 9, from: "POETI 5", subject: "Estrellas", body: "Por fin cumplí mi sueño de ser Astronauta, y pude visitar a N.A.L.A, me lo crees? ;) ;)", level: 1 },
     
 ];
 
