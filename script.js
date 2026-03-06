@@ -589,10 +589,16 @@ renderNotesList();
 loadNote(1);
 
 const allEmails = [
-    { id: 1, from: "placeholder", subject: "Bienvenida", body: "lavado de king kong", level: 1 },
-    { id: 2, from: "placeholder 2", subject: "RE: Fish.exe", body: "nada aca aun", level: 1 },
-    { id: 3, from: "placeholder 3", subject: "TE VEO", body: "yo tambien me veo.", level: 1 },
-    { id: 4, from: "caballo", subject: "ALERTA CRÍTICA", body: "lol", level: 4 }
+    { id: 1, from: "MUSCLE GUY", subject: "COMPRA YA", body: "COMPRA NUESTROS PRODUCTOS!!! OSSHA NO SIRVE!!! comprayaestacosa.com", level: 1 },
+    { id: 2, from: "SUPERANTISPYWARE", subject: "DESCARGAR ANTISPYWARE", body: "SU DESPOSITIVO TIENE VIRUS, DESCARGUE YA SUPERANTISPYWARE PRO Y OBTENGA TODAS LAS MEJORAS", level: 1 },
+    { id: 3, from: "POETI", subject: "Te extraño.", body: "Vi que estabas en linea, aun necesitas el codigo de la ultima vez? Ya te lo habia enviado de manera ACROSTICO, me lo crees? ;)", level: 4 },
+    { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich.", body: "La leyenda cuenta que el Conde de Sandwich pasaba horas, a veces hasta 24 horas seguidas, jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrumpir su juego lo llevó a buscar una solución práctica. Pidió un trozo de roast carne asada colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias, esta solución fue como encontrar un TESORO.", level: 3 },
+    { id: 5, from: "POETI 1", subject: "Water Jet", body: "El Derbi del Hipodromo la Rinconada sucedio de manera estrepitosamente interesante, el CABALLO Water Jet supero expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
+    { id: 6, from: "POETI 2", subject: "URBZ", body: "Hay rumores de que nuestro mayor enemigo en esta vida, URBZ trabaja en una Escuela como profesor, me lo crees? ;) ;)", level: 1 },
+    { id: 7, from: "POETI 3", subject: "OSSHA", body: "Compre 500 galones de OSSHA, porque me estaban diciendo que la oficina estaba muy sucia y que eran los mejores productos de Limpieza, me lo crees? ;) ;)", level: 1 },
+    { id: 8, from: "POETI 4", subject: "Semillas", body: "Me ahogue con una semilla de Durazno que estaba en el Te Lipton, me lo crees? ;) ;)", level: 1 },
+    { id: 9, from: "POETI 5", subject: "Estrellas", body: "Por fin cumpli mi sueno de ser Astronauta, y pude visitar a N.A.L.A, me lo crees? ;) ;)", level: 1 },
+    
 ];
 
 function renderMailList() {

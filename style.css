@@ -278,3 +278,46 @@ input {
     animation: glitch-anim 0.2s infinite;
     overflow: hidden;
 }
+
+/* Estilos para el Tablero de Ajedrez en Tesoro.exe */
+.chess-container {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.chess-board {
+    border-collapse: collapse;
+    border: 3px solid #444;
+}
+
+.chess-board th, .chess-board td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Color de las etiquetas (1, 2, A, B...) */
+.chess-board th {
+    background: #c0c0c0;
+    color: #000080;
+}
+
+/* Celdas blancas y grises del tablero */
+.chess-board tr:nth-child(even) td:nth-child(even),
+.chess-board tr:nth-child(odd) td:nth-child(odd) {
+    background: #ffffff;
+    color: #333;
+}
+
+.chess-board tr:nth-child(even) td:nth-child(odd),
+.chess-board tr:nth-child(odd) td:nth-child(even) {
+    background: #808080;
+    color: white;
+}

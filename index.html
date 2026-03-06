@@ -15,10 +15,10 @@
         <div class="icon" onclick="openWindow('terminal-win')">
             <div class="icon-img">📟</div>
             <span>Terminal.cmd</span>
+        </div>
         <div class="icon" onclick="openWindow('expediente-win')">
             <div class="icon-img">📂</div>
             <span>Expediente.pdf</span>
-        </div>
         </div>
         <div class="icon" onclick="openWindow('notas')">
             <div class="icon-img">📝</div>
@@ -83,16 +83,44 @@
                 <div class="title">TESORO.EXE</div>
                 <button class="close" onclick="closeWindow('mapa')">X</button>
             </div>
-            <div class="window-content" style="background: #eaecf3; display: flex; justify-content: center;">
-                <pre style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold;">
-                    <p> 
-                      1 2 3 4 
-                    A P 9 $ v
-                    B 2 ! m Q
-                    C 7 * W b
-                    D R s 5 @
-                    </p>
-                </pre>
+            <div class="window-content chess-container">
+                <table class="chess-board">
+                    <tr>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                    <tr>
+                        <th>A</th>
+                        <td>P</td>
+                        <td>9</td>
+                        <td>$</td>
+                        <td>v</td>
+                    </tr>
+                    <tr>
+                        <th>B</th>
+                        <td>2</td>
+                        <td>!</td>
+                        <td>m</td>
+                        <td>Q</td>
+                    </tr>
+                    <tr>
+                        <th>C</th>
+                        <td>7</td>
+                        <td>*</td>
+                        <td>W</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <th>D</th>
+                        <td>R</td>
+                        <td>s</td>
+                        <td>5</td>
+                        <td>@</td>
+                    </tr>
+                </table>
             </div>
         </div>
 
