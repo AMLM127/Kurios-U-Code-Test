@@ -210,10 +210,12 @@ const DOG = `
 const puzzles = {
     1: {
         dialogs: [
-            { text: "<KROS> Bienvenido, agente.", color: "orange"},
-            { text: "<KROS> Uno de nuestros servidores fue atacado e intervenido por la organizacion A.N.S", color: "orange" },
-            { text: "<KROS> ㅤ En este servidor, se encuentra un expediente secreto que has de recuperar.", color: "orange" },
-            { text: "<KROS> No sera facil de descifrar, pero por algo te llamamos a ti.", color: "orange" },
+            { text: "<SISTEMA> El expediente con la información secreta del Colegio, bajo el nombre código, Expediente Kurios, ha sido parcialmente recuperado.", color: "#B027F5"},
+            { text: "<SISTEMA> ... *Se está recibiendo una conexión por parte del agente de Kurios, KROS", color: "#B027F5"},
+            { text: "<KROS> Bienvenido, agente _______.", color: "orange"},
+            { text: "<KROS> Nuestro servidor ha sido atacado e intervenido por la organización A.N.S.", color: "orange" },
+            { text: "<KROS> El administrador principal del servidor ha desaparecido. Creemos que fue secuestrado por esta malvada organización.", color: "orange" },
+            { text: "<KROS> Aunque disponemos de una gran parte de información del expediente, el mismo está corrupto, y no es confiable.", color: "orange" },
             { text: "<KROS> Si tienes alguna duda, podemos ayudarte, tan solo has de usar el comando /pista.", color: "orange" },
             { text: "<KROS> Eres la ultima esperanza, contamos contigo.", color: "orange" }, 
             { text: weNeedYou, color: "orange" },
@@ -660,4 +662,5 @@ function readEmail(id) {
         </div>
         <div class="mail-body">${mail.body}</div>
     `;
+
 }
