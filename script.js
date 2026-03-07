@@ -310,10 +310,10 @@ const puzzles = {
             { text: "█████ 89%", color: "white" },
             { text: "██████ 100%", color: "white" },
             { text: "Inicializando asistente IA.", color: "white" },
-            { text: "<AI> Hola! Soy Kurios AI, tu asistente Kurios personal diseñado para ayudarte en cualquier ocasion.", color: "white" },
-            { text: "<AI> Para evitar el uso incorrecto de mis capacidades, hemos implementado un sistema de verificacion.", color: "white" },
-            { text: "<AI> Se le hara una pregunta basica que ha de responder si desea continuar", color: "white" },
-            { text: "<AI> ¿Que es verde y huele a pintura?", color: "white" },
+            { text: "<AI> ¡Hola! Soy Kurios AI, tu asistente Kurios personal, diseñado para ayudarte en cualquier ocasión. ", color: "white" },
+            { text: "<AI> Para evitar el uso incorrecto de mis capacidades, hemos implementado un sistema de verificación humana.", color: "white" },
+            { text: "<AI> A continuación, te haré una pregunta básica que debes responder si deseas continuar. ", color: "white" },
+            { text: "<AI> ¿Qué es verde y huele a pintura?", color: "white" },
         ],
         answer: "pintura verde",
         hint: "No debes pensar mucho."
@@ -825,3 +825,4 @@ function readEmail(id) {
     `;
 
 }
+
