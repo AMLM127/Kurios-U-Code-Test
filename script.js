@@ -287,12 +287,18 @@ const Credits = `
 const puzzles = {
     1: {
         dialogs: [
-            { text: "<KROS> Bienvenido, agente.", color: "orange"},
-            { text: "<KROS> Uno de nuestros servidores fue atacado e intervenido por la organizacion A.N.S", color: "orange" },
-            { text: "<KROS> ㅤ En este servidor, se encuentra un expediente secreto que has de recuperar.", color: "orange" },
-            { text: "<KROS> No sera facil de descifrar, pero por algo te llamamos a ti.", color: "orange" },
-            { text: "<KROS> Si tienes alguna duda, podemos ayudarte, tan solo has de usar el comando /pista.", color: "orange" },
-            { text: "<KROS> Eres la ultima esperanza, contamos contigo.", color: "orange" }, 
+            { text: "<SISTEMA> El expediente con la información secreta del Colegio, bajo el nombre código, Expediente Kurios, ha sido parcialmente recuperado.", color: "#B027F5"},
+            { text: "<SISTEMA> ... *Se está recibiendo una conexión por parte del agente de Kurios, KROS.", color: "#B027F5"},
+            { text: "<KROS> Bienvenido, agente _______.", color: "orange"},
+            { text: "<KROS> Nuestro servidor ha sido atacado e intervenido por la organización A.N.S.", color: "orange" },
+            { text: "<KROS> El administrador principal del servidor ha desaparecido. Creemos que fue secuestrado por esta malvada organización.", color: "orange" },
+            { text: "<KROS> Aunque disponemos de una gran parte de información del expediente, el mismo está corrupto, y no es confiable.", color: "orange" },
+            { text: "<KROS> El resto de la información, sin embargo, se encuentra principalmente en nuestro servidor. Debemos indagar en él y recuperar los fragmentos perdidos.", color: "orange"},
+            { text: "<KROS> Tras el ataque, múltiples protocolos de seguridad han sido activados. No puedo acceder al servidor de forma completa desde mi ubicación actual.", color: "orange" },
+            { text: "<KROS> Por lo tanto, la única persona con acceso completo al servidor, eres tú. ", color: "orange" },
+            { text: "<KROS> Aunque no puedo ayudarte directamente, te ofreceré mis sugerencias mediante el uso del comando ./pista escrito en la terminal de la sesión.", color: "orange" },
+            { text: "<KROS> No será una misión fácil. Sin embargo, confío en tu experiencia. Sé que eres la persona que resolverá el asunto.", color: "orange" },
+            { text: "<KROS> Eres la última esperanza. Cuento contigo.", color: "orange" }, 
             { text: weNeedYou, color: "orange" },
             { text: bootup, color: "#B027F5" },
             { text: "ㅤ SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
@@ -817,4 +823,5 @@ function readEmail(id) {
         </div>
         <div class="mail-body">${mail.body}</div>
     `;
+
 }
