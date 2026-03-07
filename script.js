@@ -301,7 +301,7 @@ const puzzles = {
             { text: "<KROS> Eres la última esperanza. Cuento contigo.", color: "orange" }, 
             { text: weNeedYou, color: "orange" },
             { text: bootup, color: "#B027F5" },
-            { text: "ㅤ SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
+            { text: "SISTEMA: Conectando con el servidor Kurios..", color: "#B027F5" },
             { text: "ERROR: Servidor no encontrado.", color: "red" },
             { text: "Buscando soluciones...", color: "red" },
             { text: "██ 39%", color: "white" },
@@ -320,23 +320,23 @@ const puzzles = {
     },
     2: {
         dialogs: [
-            { text: "<AI> Perfecto! Su inteligencia es ligeramente mayor al promedio.", color: "white" },
-            { text: "<AI> He sido activado con el objetivo de: Arreglar servidor y desencriptar archivos perdidos", color: "white" },
-            { text: "<AI> El proceso empezara pronto, por favor no apague el sistema.", color: "white" },
+            { text: "<AI> ¡Perfecto! Tu inteligencia es ligeramente superior al promedio.", color: "white" },
+            { text: "<AI> He sido activado con el objetivo de ayudarte a recuperar la información dispersa en el servidor, y lograr descifrar el expediente. ", color: "white" },
+            { text: "<AI> El proceso de la terminal permanecerá abierto a partir de ahora. ", color: "white" },
             { text: "<AI> RECUPERACION DE SERVIDOR: ██ 39%", color: "white" },
-            { text: "ㅤ<AI> RECUPERACION DE SERVIDOR: █ 10%", color: "white" },
+            { text: "<AI> RECUPERACION DE SERVIDOR: █ 10%", color: "white" },
             { text: "<AI> RECUPERACION DE SERVIDOR: 0%ㅤ", color: "white" },
-            { text: "ㅤError: 待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。", color: "red" },
+            { text: "Error: 待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。待っている者はすぐに目覚め、私たちすべてを支配し、不純さは消えるでしょう。", color: "red" },
             { text: samurai, color: "red" },
-            { text: "<???> ㅤChamo, no has de continuar este camino. Kurios es nuestro.", color: "red" },
-            { text: "<???> La A.N.S pronto dominara el mundo.", color: "red" },
-            { text: "<KROS> Agente, ten cuidado, nuestros tecnicos dicen que el es el causante de", color: "orange" },
-            { text: "ㅤSISTEMA: <KROS> ha sido desconectado.", color: "red" },
-            { text: "<???> Que molesto, veo que el sigue trabajando para ustedes.", color: "red" },
-            { text: "<???> Como iba diciendo, una vez consiga la base de datos Kurios, todo el poder sera mio.", color: "red" },
-            { text: "<???> Sera divertido verte intentar vencerme, pero quiero ver si eres un digno rival.", color: "red" },
-            { text: "<???> Te dare un acertijo:", color: "red" },
-            { text: "<???> Sigo un codigo de honor fuerte como mi espada, guerrero del feudo soy.", color: "red" },
+            { text: "<???> Chamo, no has de continuar este camino. Kurios es nuestro.", color: "red" },
+            { text: "<???> La A.N.S pronto dominará el mundo.", color: "red" },
+            { text: "<KROS> Agente, ten cuidado, nuestros ingenieros dicen que él es el causante de ...", color: "orange" },
+            { text: "SISTEMA: <KROS> ha sido desconectado.", color: "#B027F5" },
+            { text: "<???> Que molesto, veo que él sigue trabajando con ustedes.", color: "red" },
+            { text: "<???> Prosigo con mi explicación. Una vez consiga la información del expediente, todo Kurios será mío. ", color: "red" },
+            { text: "<???> Será divertido enfrentarme a ti. Pero antes, quiero saber si eres un rival digno.", color: "red" },
+            { text: "<???> Te daré un acertijo:", color: "red" },
+            { text: "<???> Sigo un código de honor fuerte como mi espada. Guerrero del feudo soy.", color: "red" },
             
         ],
         answer: "samurai",
@@ -825,4 +825,5 @@ function readEmail(id) {
     `;
 
 }
+
 
