@@ -469,7 +469,6 @@ const puzzles = {
             { text: "<POETI> No conozco la clave root, pero Jeremy me comentó hace muchos años que la había respaldado por si acaso pasaba algo como esto, y que yo podria identificarla", color: "cyan" },
             { text: "<POETI> Me dijo que estaria relacionada con unos poemas mios, pero no recuerdo cuales eran! T_T", color: "cyan" },
             { text: "<POETI> Segun lo que me dijo Jeremy, la clave deberia ser una palabra de 5 letras", color: "cyan" },
-            { text: "<POETI> Acabo de envia", color: "cyan" },
             { text: "<KROS> Encontré los poemas indicados por el Poetista. No logré descifrarlos, pero creo que tú podrías hacerlo Agente. Te los acabo de mandar por correo al Servidor. ", color: "orange" }
             { text: "!Has recibido un nuevo correo!", color: "white" },    
             { text: "<KROS> Agente, esto depende de ti. No tenemos más oportunidades. Confío en ti. El futuro de Kurios está en tus manos.", color: "orange" },
@@ -481,29 +480,37 @@ const puzzles = {
 
         6: {
         dialogs: [
-            { text: "<AI> Perfecto! Salvamos Kurios!!", color: "white" },
-            { text: "<AIB> Maravilloso... Salvamos..", color: "#ffbbbb" },
-            { text: "ㅤ<AIBZ> Es simplemente increible.", color: "#ff7c7c" },
-            { text: "<ARBZ> Es posible ser tan tonto?", color: "#ff4747" },
-            { text: "ㅤ<URBZ> Todo este tiempo, fui yo.", color: "red" },
-            { text: "<URBZ> Me diste la clave para acceder a todo Kurios.", color: "red" },
-            { text: "<KROS> Tu... como te atreves?!", color: "orange" },
-            { text: "<URBZ> Crei que no caerias en un truco tan simple, Kros.", color: "red" },
-            { text: "<URBZ> Mas que nadie deberias saberlo, Kurios AI siempre fue mi creacion.", color: "red" },
-            { text: "<URBZ> No la tuya.", color: "red" },
-            { text: "ㅤ<KROS> Infeliz... Me las vas a pagar!", color: "orange" },
-            { text: "ㅤSISTEMA: <KROS> DESCONECTADO.", color: "red" },
-            { text: "ㅤSISTEMA: <POETI> DESCONECTADO>", color: "red" },
+            { text: "<AI> ¡Perfecto, hemos salvado Kurios!", color: "white" },
+            { text: "<AIB> Maravilloso... Hemos... Salvado...", color: "#ffbbbb" },
+            { text: "<AIBZ> Es simplemente increíble.", color: "#ff7c7c" },
+            { text: "<ARBZ> ¿Es posible ser tan tonto? ", color: "#ff4747" },
+            { text: "<URBZ> Todo este tiempo, he sido yo.", color: "red" },
+            { text: "<KROS> ¿Qué? ", color: "orange" },
+            { text: "<URBZ> Confiaste tanto en tu famoso Kurios AI, que tanto orgullo te genera, y no te diste cuenta de que era yo. ", color: "red" },
+            { text: "<POETI> Kurios AI debió desactivarse durante el ataque desde el principio, ya que era la primera capa de proteccion... ", color: "cyan" },
+            { text: "<URBZ> Pensaron que se había mantenido activo, ya que confían demasiado en sus habilidades. ", color: "red" },   
+            { text: "<URBZ> Fueron ingenuos. Yo ya había desactivaod Kurios AI. De hecho, fue lo primero que hice.", color: "red" },
+            { text: "<POETI> Imposible! Ni siquiera yo o Jeremy podríamos hacer eso... ", color: "cyan" },
+            { text: "<KROS> No deberías ser capaz de desactivar Kurios AI, si yo... ", color: "orange" },
+            { text: "<URBZ> El único error que cometí fue haber pensado que secuestrar al Administrador ayudaría en algo. Pero no, por eso he tenido que valerme de este plan alternativo. ", color: "red" },
+            { text: "<URBZ> Gracias a ti KROS, y a tu agente, ahora tengo el acceso root del Servidor Kurios. Ahora dispongo del control total.", color: "red" },  
+            { text: "<KROS> Tú... Cómo te atreves. Detén esta locura AHORA MISMO. ", color: "orange" },
+            { text: "<URBZ> No te creía tan ingenuo, KROS. No deberías haber caído en una trampa tan evidente.", color: "red" },
+            { text: "<URBZ> Tú, más que nadie, deberías saberlo. Kurios AI siempre fue mi creación original, no la tuya. Por eso logré desactivarlo tan fácilmente. ", color: "red" },
+            { text: "<KROS> Infeliz... ¡Me las vas a pagar! ¡No puedes esconderte de Kurios!", color: "orange" },
+            { text: "SISTEMA: <KROS> DESCONECTADO.", color: "#B027F5" },
+            { text: "SISTEMA: <POETI> DESCONECTADO>", color: "#B027F5" },
             { text: samurai, color: "red" },
-            { text: "<URBZ> En serio, he de agradecerte chamo.", color: "red" },
-            { text: "<URBZ> La era Neo Samurai comienza.", color: "red" },
-            { text: "SISTEMA: Desconectando usuario...", color: "white" },
+            { text: "<URBZ> En serio, he de agradecerte, chamo.", color: "red" },
+            { text: "<URBZ> Fuiste la pieza más importante de mi pla, agente.", color: "red" },
+            { text: "<URBZ> La época Neo Samurai comienza.", color: "red" },
+            { text: "SISTEMA: Desconectando usuario...", color: "#B027F5" },
             { text: "██ 39%", color: "white" },
             { text: "ㅤ███ 49%", color: "white" },
             { text: "████ 76%", color: "white" },
             { text: "ㅤ█████ 89%", color: "white" },
             { text: "██████ 100%", color: "white" },
-            { text: "ㅤYa no tiene permisos de manipular esta terminal.", color: "white" },
+            { text: "Ya no tiene permisos de manipular esta terminal.", color: "white" },
             { text: FIN, color: "white" },
             { text: Credits, color: "white" },
 
@@ -859,6 +866,7 @@ function readEmail(id) {
     `;
 
 }
+
 
 
 
