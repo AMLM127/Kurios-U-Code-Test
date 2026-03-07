@@ -287,7 +287,7 @@ const Credits = `
 const puzzles = {
     1: {
         dialogs: [
-            { text: "<SISTEMA> El expediente con la información secreta del Colegio, bajo el nombre código, Expediente Kurios, ha sido parcialmente recuperado.", color: "#B027F5"},
+            { text: "<SISTEMA> El expediente con la información secreta de Kurios, bajo el nombre código, Expediente Kurios, ha sido parcialmente recuperado.", color: "#B027F5"},
             { text: "<SISTEMA> ... *Se está recibiendo una conexión por parte del agente de Kurios, KROS.", color: "#B027F5"},
             { text: "<KROS> Bienvenido, agente _______.", color: "orange"},
             { text: "<KROS> Nuestro servidor ha sido atacado e intervenido por la organización A.N.S.", color: "orange" },
@@ -835,6 +835,7 @@ function readEmail(id) {
     `;
 
 }
+
 
 
 
