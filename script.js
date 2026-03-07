@@ -287,11 +287,12 @@ const Credits = `
 const puzzles = {
     1: {
         dialogs: [
-            { text: "<SISTEMA> El expediente con la información secreta de Kurios, bajo el nombre código, Expediente Kurios, ha sido parcialmente recuperado.", color: "#B027F5"},
+            { text: "<SISTEMA> El archivo Expediente ha sido parcialmente recuperado.", color: "#B027F5"},
             { text: "<SISTEMA> ... *Se está recibiendo una conexión por parte del agente de Kurios, KROS.", color: "#B027F5"},
             { text: "<KROS> Bienvenido, agente _______.", color: "orange"},
             { text: "<KROS> Nuestro servidor ha sido atacado e intervenido por la organización A.N.S.", color: "orange" },
             { text: "<KROS> El administrador principal del servidor ha desaparecido. Creemos que fue secuestrado por esta malvada organización.", color: "orange" },
+            { text: "<KROS> El ataque vino después de que el administrador intentara abrir un archivo llamado Expediente. Al parecer el archivo contiene información de gran importancia para Kurios.", color: "orange" },
             { text: "<KROS> Aunque disponemos de una gran parte de información del expediente, el mismo está corrupto, y no es confiable.", color: "orange" },
             { text: "<KROS> El resto de la información, sin embargo, se encuentra principalmente en nuestro servidor. Debemos indagar en él y recuperar los fragmentos perdidos.", color: "orange"},
             { text: "<KROS> Tras el ataque, múltiples protocolos de seguridad han sido activados. No puedo acceder al servidor de forma completa desde mi ubicación actual.", color: "orange" },
@@ -385,40 +386,52 @@ const puzzles = {
 
     4: {
         dialogs: [
-            { text: "<KROS> Perfecto! Sabiamos que traerte era buena idea.", color: "orange" },
+            { text: "<KROS> ¡Perfecto! ¡La clave era correcta! Sabía que podíamos contar contigo.", color: "orange" },
             { text: "<AI> .", color: "white" },
             { text: "<AI> ..", color: "white" },
             { text: "<AI> ...", color: "white" },
-            { text: "<AI> Expediente desencriptado un 60%", color: "white" },
-            { text: "<AI> Esta bloqueado, analizando posibles maneras de desencriptar..", color: "white" },
-            { text: "<KROS> No se me occure nada..", color: "orange" },
-            { text: "<KROS> Perdon, pero creo que nuestra mision acaba aqui.ㅤ", color: "orange" },
+            { text: "<AI> Gradias a la clave que encontraste, he logrado descomprimir parte de la data corrupta.", color: "white" },
+            { text: "<AI> Ahora he desencriptado un 60% del expediente. ", color: "white" },
+            { text: "<AI> El paso siguiente sería intentar acceder al usuario root del sistema. ", color: "white" },
+            { text: "<AI> Sin embargo, por protocolos de seguridad, el acceso a las rutas /etc/passwd han sido cerradas.", color: "white" },
+            { text: "<KROS> Acceder al sistema root será demasiado complicado. Tendríamos que contar con el Administrador, o el Ingeniero en Sistemas del servidor. ", color: "orange" },
+            { text: "<KROS> El ingeniero se encuentra de vacaciones, y no hemos logrado contactar con él. Quizás fue secuestrado también. No se qué hacer. ", color: "orange" },
+            { text: "<KROS> Intentaré acceder al usuario root con una contraseña de respaldo que solía usar el administrador. ", color: "orange" },
             { text: "ㅤ<¿?> ..--- ----- ....- -.... .---- ----- ----- ...--", color: "blueviolet" },
-            { text: "<KROS> Viste eso? quizas sea nuestra pista para avanzar..", color: "orange" },
-            { text: "<KROS> Parece una señal del Satelite N.A.L.A.", color: "orange" },
-            { text: "<KROS> Te ayudare a establecer una conexion", color: "orange" },
-            { text: "<AI> No hay necesidad, ya estoy encargandome de realizar esa conexion.", color: "white" },
-            { text: "<KROS> Puedes verme?", color: "orange" },
+            { text: "<KROS> ¿Recibiste un mensaje de respuesta? Puede que sea de utilidad.", color: "orange" },
+            { text: "<KROS> Parece una señal del Satélite N.A.L.A.", color: "orange" },
+            { text: "<KROS> El Satélite NALA fue un sistema creado para monitorear las mascotas de los colegios que son Aliados Kurios.", color: "orange" },
+            { text: "<KROS> NALA significa Network for Animal Location and Assistance, o Red para la Localizacióny  Asistencia de Animales. ", color: "orange" },
+            { text: "<KROS> Dicho satélite poseía un sistema de almacenamiento que el administrador podía usar como respaldo de la información del Servidor.", color: "orange" },
+            { text: "<KROS> Si pudiésemos acceder a él, podríamos recuperar un respaldo instantáneo (snapshot) del Servidor. Con ello, podríamos realizar una comparación con los archivos actuales, y ver en dónde hubo modificaciones tras el ataque. ", color: "orange" },   
+            { text: "<KROS> Te ayudaré a establecer una conexión con el Satélite NALA. Sigue estos pasos: ", color: "orange" },
+            { text: "<AI> No es necesario, ya estoy encargándome de realizar esta conexión. ", color: "white" },
+            { text: "<KROS> ¿Kurios AI? ¿Puedes leerme? ", color: "orange" },
             { text: "<AI> Controlo y veo todo lo que pasa por esta terminal.", color: "white" },
+            { text: "<KROS> Eso no debería ser pos...", color: "orange" },
             { text: DOG, color: "blueviolet" },
             { text: NALA, color: "blueviolet" },
-            { text: "<N.A.L.A> ERROR, ERROR, ERROR, INTRUSO DETECTADO", color: "blueviolet" },
-            { text: "<N.A.L.A> DE NO SER ELIMINADO, AUTODESTRUCCION INMINENTE", color: "blueviolet" },
-            { text: "<KROS> Que raro, no deberia detectarnos como intrusos...", color: "orange" },
-            { text: "<KROS> Acaso sera..ㅤ", color: "orange" },
+            { text: "<N.A.L.A> ERROR, ERROR, ERROR, INTRUSO DETECTADO. ", color: "blueviolet" },
+            { text: "<N.A.L.A> ACTIVANDO PROTOCOLOS DE AUTODESTRUCCIÓN DE ALMACENAMIENTO. ", color: "blueviolet" },
+            { text: "<KROS> Que extraño. NALA no debería presentar signos de ataque. ", color: "orange" },
+            { text: "<KROS> Acaso será ...ㅤ", color: "orange" },
             { text: samurai, color: "red" },
-            { text: "ㅤ<URBZ> Kros, cuanto tiempo ha pasado.", color: "red" },
-            { text: "<URBZ> Llegan tarde, el satelite ya es mio.", color: "red" },
-            { text: "<URBZ> Con esto, empezara la era NEO SAMURAI. No es acaso genial?", color: "red" },
-            { text: "<URBZ> Tanto esfuerzo..ㅤ", color: "red" },
+            { text: "ㅤ<URBZ> KROS, cómo ha pasado el tiempo. Tú y el agente llegan tarde.", color: "red" },
+            { text: "<URBZ> El satélite ya es mío. No supieron anticipar mis movimientos.", color: "red" },
+            { text: "<URBZ> Estos no fueron los conocimientos que te enseñé, KROS. ", color: "red" },
+            { text: "<URBZ> Con esto, comenzará la época Neo Samurai. ¿No es acaso genial? ", color: "red" },
+            { text: "<URBZ> Tanto esfuerzo ...ㅤ", color: "red" },
             { text: PARANADA, color: "red" },
-            { text: "ㅤ<KROS> Me encargo yo de el. Tenemos asuntos pendientes.", color: "orange" },
-            { text: "<KROS> Encargate de desactivar la autodestruccion.", color: "orange" },
-            { text: "<N.A.L.A> PROTOCOLO DE AUTODESTRUCCION: SE EJECUTARA SI NO SE ENVIA LA CLAVE.", color: "blueviolet" },
+            { text: "<KROS> Ignora a URBZ. Yo me encargo de él. Tenemos asuntos pendientes. Encárgate de frenar la autodestrucción. ", color: "orange" },
+            { text: "<URBZ> Inténtalo KROS, quiero ver cómo fra...ㅤ", color: "red" },
+            { text: "SISTEMA: <KROS> DESCONECTADO.", color: "#B027F5" },
+            { text: "SISTEMA: <URBZ> DESCONECTADO>", color: "#B027F5" },
+            { text: "<N.A.L.A> PROTOCOLO DE AUTODESTRUCCIÓN DEL ALMACENAMIENTO: Se ejecutará automáticamente a menos que se introduzca la contraseña de desactivación. ", color: "blueviolet" },
+            { text: "<AI> Se necesita una contraseña para desactivar el sistema de autodestrucción de información de NALA. Solicitaré una pista al sistema.", color: "white" },
             { text: "<N.A.L.A> EL PASADO Y EL OCEANO SE UNEN PARA RESPONDER.", color: "blueviolet" },
         ],
         answer: "20461003",
-        hint: "El codigo morse enviado previamente, para descifrarlo has de buscar a aquel que nada en los rios y mares."
+        hint: "El código morse enviado previamente. Para descifrarlo, busca aquel que nada en los ríos y mares."
     },
 
     5: {
@@ -835,6 +848,7 @@ function readEmail(id) {
     `;
 
 }
+
 
 
 
