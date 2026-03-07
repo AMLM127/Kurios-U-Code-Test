@@ -204,18 +204,93 @@ const DOG = `
 .............-*=::=*###%@@@@@@@@@@@@@@@@%#%#%%@@@+..:-=+*
 .............--=+#%@@@@@@%%@@@@%%@@@@@%%@@@@@@@@@#..::-+*
 `
-                    
+const FIN = `
+   ▄████████  ▄█  ███▄▄▄▄  
+  ███    ███ ███  ███▀▀▀██▄
+  ███    █▀  ███▌ ███   ███
+ ▄███▄▄▄     ███▌ ███   ███
+▀▀███▀▀▀     ███▌ ███   ███
+  ███        ███  ███   ███
+  ███        ███  ███   ███
+  ███        █▀    ▀█   █▀ 
+`     
+const Credits = `
+░█░█░▀█▀░█▄█░█░░                                                  
+░█▀█░░█░░█░█░█░░                                                  
+░▀░▀░░▀░░▀░▀░▀▀▀                                                  
+░█▀█░█▀█░█▀▄░█▀█░█▄█░░░█░░░▀█▀░█▀▀░▀█▀░█▀█                        
+░█▀█░█▀█░█▀▄░█▀█░█░█░░░█░░░░█░░▀▀█░░█░░█▀█                        
+░▀░▀░▀░▀░▀░▀░▀░▀░▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀░▀                        
+░░░                                                               
+░░░                                                               
+░▀░                                                               
+░█▀▀░█▀▀░█▀▀                                                      
+░█░░░▀▀█░▀▀█                                                      
+░▀▀▀░▀▀▀░▀▀▀                                                      
+░█▀█░█▀█░█▀▄░█▀█░█▄█░░░█░░░▀█▀░█▀▀░▀█▀░█▀█                        
+░█▀█░█▀█░█▀▄░█▀█░█░█░░░█░░░░█░░▀▀█░░█░░█▀█                        
+░▀░▀░▀░▀░▀░▀░▀░▀░▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀░▀                        
+░░░                                                               
+░░░                                                               
+░▀░                                                               
+░▀▀█░█▀█░█░█░█▀█░█▀▀░█▀▀░█▀▄░▀█▀░█▀█░▀█▀                          
+░░░█░█▀█░▀▄▀░█▀█░▀▀█░█░░░█▀▄░░█░░█▀▀░░█░                          
+░▀▀░░▀░▀░░▀░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░░░░▀░                          
+░█▀█░█▀█░█▀▄░█▀█░█▄█░░░█░░░▀█▀░█▀▀░▀█▀░█▀█                        
+░█▀█░█▀█░█▀▄░█▀█░█░█░░░█░░░░█░░▀▀█░░█░░█▀█                        
+░▀░▀░▀░▀░▀░▀░▀░▀░▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀░▀                        
+░░░                                                               
+░░░                                                               
+░▀░                                                               
+░█▀█░█▀█░█▀▄░█▀▄░█▀█░▀█▀░▀█▀░█░█░█▀█                              
+░█░█░█▀█░█▀▄░█▀▄░█▀█░░█░░░█░░▀▄▀░█▀█                              
+░▀░▀░▀░▀░▀░▀░▀░▀░▀░▀░░▀░░▀▀▀░░▀░░▀░▀                              
+░█▀█░█▀█░█▀▄░█▀█░█▄█░░░░░░░▀▀█░█▀▀░█▀▀░█░█░█▀▀░░░░                
+░█▀█░█▀█░█▀▄░█▀█░█░█░░░░░░░░░█░█▀▀░▀▀█░█░█░▀▀█░░░░                
+░▀░▀░▀░▀░▀░▀░▀░▀░▀░▀░▄▀░░░░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▄▀░                
+░█▀█░█▀█░▀█▀░█░█░█▀█░█░░░▀█▀░█▀▀░░░░░░░█▀▄░█▀█░█▄█░█▀▀░█▀▀░█▀▀░░░░
+░█░█░█▀█░░█░░█▀█░█▀█░█░░░░█░░█▀▀░░░░░░░█▀▄░█▀█░█░█░▀▀█░█▀▀░▀▀█░░░░
+░▀░▀░▀░▀░░▀░░▀░▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▄▀░░░░▀░▀░▀░▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▄▀░
+░█▀█░█▀▄░▀█▀░█▀█░█▀▄░█▀█░█▀█                                      
+░█▀█░█▀▄░░█░░█▀█░█░█░█░█░█▀█                                      
+░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀░░▀░▀░▀░▀                                      
+░░░                                                               
+░░░                                                               
+░▀░                                                               
+░█▀█░█▀▀░█▀▄░█▀█░█▀▄░█▀▀░█▀▀░▀█▀░█▄█░▀█▀░█▀▀░█▀█░▀█▀░█▀█░█▀▀      
+░█▀█░█░█░█▀▄░█▀█░█░█░█▀▀░█░░░░█░░█░█░░█░░█▀▀░█░█░░█░░█░█░▀▀█      
+░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀      
+░█░█░█░█░█▀▄░▀█▀░█▀█░█▀▀                                          
+░█▀▄░█░█░█▀▄░░█░░█░█░▀▀█                                          
+░▀░▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀                                          
+░▀▀█░█▀▀░█▀▀░█░█░█▀▀░░░█░█░█▀▄░█▀▄░█▀█░█▀▀░▀▀█                    
+░░░█░█▀▀░▀▀█░█░█░▀▀█░░░█░█░█▀▄░█▀▄░█▀█░█▀▀░▄▀░                    
+░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀░▀░▀▀░░▀░▀░▀▀▀░▀▀▀                    
+░█░█░█▀▀░█▀▀░█▀▀░█▀▄                                              
+░█░█░█▀▀░█░░░█▀▀░█▀▄                                              
+░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀░                                              
+░█▀█░█▀█░█░░░█▀█                                                  
+░█░█░█▀█░█░░░█▀█                                                  
+░▀░▀░▀░▀░▀▀▀░▀░▀                                                  
+░░░                                                               
+░░░                                                               
+░▀░                                                               
+░█▀▀░█▀█░█▀█░▀█▀░▀█▀░█▀█░█░█░█▀█░█▀▄░█▀█░░░                       
+░█░░░█░█░█░█░░█░░░█░░█░█░█░█░█▀█░█▀▄░█▀█░░░                       
+░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░▀▀▀░▀░▀░▀░▀░▀░▀░▀░                       
+░▀▀▄░▄▀▄░▀▀▄░▄▀▀░░░                                               
+░▄▀░░█/█░▄▀░░█▀▄░░░                                               
+░▀▀▀░░▀░░▀▀▀░░▀░░▀░                                               
+`
 
 // --- CONFIGURACIÓN DE NIVELES ---
 const puzzles = {
     1: {
         dialogs: [
-            { text: "<SISTEMA> El expediente con la información secreta del Colegio, bajo el nombre código, Expediente Kurios, ha sido parcialmente recuperado.", color: "#B027F5"},
-            { text: "<SISTEMA> ... *Se está recibiendo una conexión por parte del agente de Kurios, KROS", color: "#B027F5"},
-            { text: "<KROS> Bienvenido, agente _______.", color: "orange"},
-            { text: "<KROS> Nuestro servidor ha sido atacado e intervenido por la organización A.N.S.", color: "orange" },
-            { text: "<KROS> El administrador principal del servidor ha desaparecido. Creemos que fue secuestrado por esta malvada organización.", color: "orange" },
-            { text: "<KROS> Aunque disponemos de una gran parte de información del expediente, el mismo está corrupto, y no es confiable.", color: "orange" },
+            { text: "<KROS> Bienvenido, agente.", color: "orange"},
+            { text: "<KROS> Uno de nuestros servidores fue atacado e intervenido por la organizacion A.N.S", color: "orange" },
+            { text: "<KROS> ㅤ En este servidor, se encuentra un expediente secreto que has de recuperar.", color: "orange" },
+            { text: "<KROS> No sera facil de descifrar, pero por algo te llamamos a ti.", color: "orange" },
             { text: "<KROS> Si tienes alguna duda, podemos ayudarte, tan solo has de usar el comando /pista.", color: "orange" },
             { text: "<KROS> Eres la ultima esperanza, contamos contigo.", color: "orange" }, 
             { text: weNeedYou, color: "orange" },
@@ -285,6 +360,7 @@ const puzzles = {
             { text: "<AI> ...", color: "white" },
             { text: "<AI> Se requiere una contraseña para continuar.", color: "white" },
             { text: "<KROS> Parece que tendremos que pensar fuera de nuestra zona de comfort si queremos descifrarlo.", color: "orange" },
+            { text: "!Has recibido un nuevo correo!", color: "white" },  
             { text: "<KROS> ¿Estas seguro de que no te has saltado nada?", color: "orange" },
         ],
         answer: "vr7!",
@@ -323,19 +399,77 @@ const puzzles = {
             { text: "ㅤ<KROS> Me encargo yo de el. Tenemos asuntos pendientes.", color: "orange" },
             { text: "<KROS> Encargate de desactivar la autodestruccion.", color: "orange" },
             { text: "<N.A.L.A> PROTOCOLO DE AUTODESTRUCCION: SE EJECUTARA SI NO SE ENVIA LA CLAVE.", color: "blueviolet" },
-            { text: "<N.A.L.A> EL PASADO Y EL ABISMO SE UNEN PARA RESPONDER.", color: "blueviolet" },
+            { text: "<N.A.L.A> EL PASADO Y EL OCEANO SE UNEN PARA RESPONDER.", color: "blueviolet" },
         ],
         answer: "20461003",
-        hint: "El codigo morse enviado previamente. Una aplicacion tiene tu clave de traduccion."
+        hint: "El codigo morse enviado previamente, para descifrarlo has de buscar a aquel que nada en los rios y mares."
     },
 
     5: {
         dialogs: [
-            { text: "aca iria el puzzle del poetista pero aja..", color: "white" },
+            { text: "<URBZ> Vaya... No esperaba que pudieras salvar al satelite.", color: "red" },
+            { text: "<URBZ> Aun asi... Por mas que te esfuerces, da igual.", color: "red" },
+            { text: "SISTEMA: POETI se ha conectado.", color: "cyan" },
+            { text: "<POETI> Jeremy!! Cuanto tiempo sin verte en linea! Te extrañe, me lo crees? ;) ;)", color: "cyan" },
+            { text: "<KROS> Ah, si es el poetista... Te saludo por cortesia, pero he de avisarte que no hablas con Jeremy.", color: "orange" },
+            { text: "<KROS> Jeremy lleva meses desaparecido.", color: "orange" },
+            { text: "<POETI> Mientes, verdad? ;() ;(", color: "cyan" },
+            { text: "<URBZ> Basta de reuniones felices.", color: "red" },
+            { text: "<URBZ> El mundo que ustedes conocen esta a punto de terminar.", color: "red" },
+            { text: "<URBZ> Kros, fuiste un adversario formidable.. Pero esto acaba aqui.", color: "red" },
+            { text: "ㅤERROR: FALLA CRITICA, FALLA CRITICA", color: "red" },
+            { text: "ㅤERROR: FALLA CRITICA, FALLA CRITICA", color: "red" },
+            { text: "ㅤERROR: FALLA CRITICA, FALLA CRITICA", color: "red" },
+            { text: "ㅤERROR: FALLA CRITICA, FALLA CRITICA", color: "red" },
+            { text: "<POETI> Que esta pasando?! Estamos perdiendo todas las conexiones...", color: "cyan" },
+            { text: "<KROS> Esta destruyendo todo el servidor! Debemos detenerlo...", color: "orange" },
+            { text: "<AI> Protocolo de respaldo activado.", color: "white" },
+            { text: "<AI>.", color: "white" },
+            { text: "<AI>..", color: "white" },
+            { text: "<AI>...", color: "white" },
+            { text: "<AI>....", color: "white" },
+            { text: "<AI> Se requiere una ultima contraseña para recuperar el expediente y evitar que el servidor se destruya.", color: "white" },
+            { text: "<POETI> Quien sea que eres, ayudanos por favor!! La clave esta oculta, ya se la habia enviado a Jeremy!", color: "cyan" },
+            { text: "<POETI> Revisa sus archivos viejos, solo recuerdo que era una palabra de 5 letras..", color: "cyan" },
+            { text: "!Has recibido un nuevo correo!", color: "white" },    
+            { text: "<KROS> Confiamos en ti.", color: "orange" },
 
         ],
-        answer: "20461003",
-        hint: "nada aun"
+        answer: "celda",
+        hint: "Debes resolver un acrostico, las palabras ha usar se encuentran ocultas en los correos, la explicacion de que es un Acrostico se encuentra en el correo."
+    },
+
+        6: {
+        dialogs: [
+            { text: "<AI> Perfecto! Salvamos Kurios!!", color: "white" },
+            { text: "<AIB> Maravilloso... Salvamos..", color: "#ffbbbb" },
+            { text: "ㅤ<AIBZ> Es simplemente increible.", color: "#ff7c7c" },
+            { text: "<ARBZ> Es posible ser tan tonto?", color: "#ff4747" },
+            { text: "ㅤ<URBZ> Todo este tiempo, fui yo.", color: "red" },
+            { text: "<URBZ> Me diste la clave para acceder a todo Kurios.", color: "red" },
+            { text: "<KROS> Tu... como te atreves?!", color: "orange" },
+            { text: "<URBZ> Crei que no caerias en un truco tan simple, Kros.", color: "red" },
+            { text: "<URBZ> Mas que nadie deberias saberlo, Kurios AI siempre fue mi creacion.", color: "red" },
+            { text: "<URBZ> No la tuya.", color: "red" },
+            { text: "ㅤ<KROS> Infeliz... Me las vas a pagar!", color: "orange" },
+            { text: "ㅤSISTEMA: <KROS> DESCONECTADO.", color: "red" },
+            { text: "ㅤSISTEMA: <POETI> DESCONECTADO>", color: "red" },
+            { text: samurai, color: "red" },
+            { text: "<URBZ> En serio, he de agradecerte chamo.", color: "red" },
+            { text: "<URBZ> La era Neo Samurai comienza.", color: "red" },
+            { text: "SISTEMA: Desconectando usuario...", color: "white" },
+            { text: "██ 39%", color: "white" },
+            { text: "ㅤ███ 49%", color: "white" },
+            { text: "████ 76%", color: "white" },
+            { text: "ㅤ█████ 89%", color: "white" },
+            { text: "██████ 100%", color: "white" },
+            { text: "ㅤYa no tiene permisos de manipular esta terminal.", color: "white" },
+            { text: FIN, color: "white" },
+            { text: Credits, color: "white" },
+
+        ],
+        answer: "./end",
+        hint: "El ya no esta."
     },
 
 };
@@ -418,7 +552,7 @@ async function handleInput(val) {
         if (puzzles[currentLevel]) {
             setTimeout(() => playLevelSequence(currentLevel), 1000);
         } else {
-            await typeWriter("SISTEMA RESTAURADO TOTALMENTE. BIENVENIDO, OPERADOR.", "cyan");
+            await typeWriter("Muchas gracias por jugar.", "cyan");
         }
     } else {
         await typeWriter("> ERROR: CREDENCIALES INVÁLIDAS.", "#ff3333");
@@ -623,17 +757,38 @@ function deleteCurrentNote() {
 renderNotesList();
 loadNote(1);
 
+const Caballo = `Galopa la tarde y en la pista caballo se enciende,
+Water Jet rompe el polvo y el asombro se prende;
+caballo en la crin, caballo en la apuesta, caballo que sorprende,
+me dejó diez dólares tibios y un latido que no se vende.`
+const Escuela = `En la pizarra murmura la escuela su lección escondida,
+escuela de rumores, escuela de pupitres, escuela de vida;
+escuela que enseña a leer entre sombras y a buscar la salida,
+donde URBZ susurra y la curiosidad se vuelve herida y guía.`
+const Limpieza = `Brilla el trapo, huele a brillo limpieza que ordena el día,
+OSSHA en galones, limpieza que borra la mancha y la porfía;
+limpieza que pule ventanas, limpieza que abre la vía,
+cada paño es un rito que devuelve la calma y la armonía.`
+const Durazno = `En el sorbo quedó clavada la semilla del durazno en la garganta,
+durazno que aprieta el pecho y deja la memoria quebranta;
+durazno dulce y peligroso, durazno que enseña y que encanta,
+me obligó a medir la respiración y a guardar la vida en una planta.`
+const Astronauta = `Cruzo la atmósfera y vuelvo: astronauta en la cúpula clara,
+astronauta que nombra estrellas y trae la noche en la cara;
+astronauta que flota, astronauta que sueña, astronauta que ampara,
+trae en el casco canciones y la tierra en una mirada rara.`
+
 const allEmails = [
+    { id: 10, from: "POETI 6", subject: "Acróstico", body: "Recuerdas la estructura de un acrostico? Son varias palabras, cuyas iniciales forman otras palabras, un ejemplo serian las palabras Amor, Irresistible, Raro, Eterno. La respuesta seria AIRE. Por suerte, los correos estan en orden, tienes que buscar palabras que se repitan mucho... Me lo crees? ;) ;)", level: 5 },
+    { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich.", body: "La leyenda cuenta que el Conde de Sandwich pasaba horas, a veces hasta 24 horas seguidas, jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrumpir su juego lo llevó a buscar una solución práctica. Pidió un trozo de roast carne asada colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias, esta solución fue como encontrar un TESORO.", level: 3 },
     { id: 1, from: "MUSCLE GUY", subject: "COMPRA YA", body: "COMPRA NUESTROS PRODUCTOS!!! OSSHA NO SIRVE!!! comprayaestacosa.com", level: 1 },
     { id: 2, from: "SUPERANTISPYWARE", subject: "DESCARGAR ANTISPYWARE", body: "SU DESPOSITIVO TIENE VIRUS, DESCARGUE YA SUPERANTISPYWARE PRO Y OBTENGA TODAS LAS MEJORAS", level: 1 },
-    { id: 3, from: "POETI", subject: "Te extraño.", body: "Vi que estabas en línea, aún necesitas el código de la última vez? Ya te lo había enviado de manera ACRÓSTICO, me lo crees? ;)", level: 4 },
-    { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich.", body: "La leyenda cuenta que el Conde de Sandwich pasaba horas, a veces hasta 24 horas seguidas, jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrumpir su juego lo llevó a buscar una solución práctica. Pidió un trozo de roast carne asada colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias, esta solución fue como encontrar un TESORO.", level: 3 },
-    { id: 5, from: "POETI 1", subject: "Water Jet", body: "El Derbi del Hipódromo la Rinconada sucedió de manera estrepitosamente interesante, el CABALLO Water Jet superó expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
-    { id: 6, from: "POETI 2", subject: "URBZ", body: "Hay rumores de que nuestro mayor enemigo en esta vida, URBZ trabaja en una Escuela como profesor, me lo crees? ;) ;)", level: 1 },
-    { id: 7, from: "POETI 3", subject: "OSSHA", body: "Compré 500 galones de OSSHA, porque me estaban diciendo que la oficina estaba muy sucia y que eran los mejores productos de Limpieza, me lo crees? ;) ;)", level: 1 },
-    { id: 8, from: "POETI 4", subject: "Semillas", body: "Me ahogué con una semilla de Durazno que estaba en el Te Lipton, me lo crees? ;) ;)", level: 1 },
-    { id: 9, from: "POETI 5", subject: "Estrellas", body: "Por fin cumplí mi sueño de ser Astronauta, y pude visitar a N.A.L.A, me lo crees? ;) ;)", level: 1 },
-    
+    { id: 5, from: "POETI 1", subject: "Water Jet", body: Caballo + ".............El Derbi del Hipódromo la Rinconada sucedió de manera estrepitosamente interesante, el CABALLO Water Jet superó expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
+    { id: 6, from: "POETI 2", subject: "URBZ", body: Escuela + "...........Hay rumores de que nuestro mayor enemigo en esta vida, URBZ trabaja en una Escuela como profesor, me lo crees? ;) ;)", level: 1 },
+    { id: 7, from: "POETI 3", subject: "OSSHA", body: Limpieza + ".........Compré 500 galones de OSSHA, porque me estaban diciendo que la oficina estaba muy sucia y que eran los mejores productos de Limpieza, me lo crees? ;) ;)", level: 1 },
+    { id: 8, from: "POETI 4", subject: "Semillas", body: Durazno + ".......Me ahogué con una semilla de Durazno que estaba en el Te Lipton, me lo crees? ;) ;)", level: 1 },
+    { id: 9, from: "POETI 5", subject: "Estrellas", body: Astronauta + "........Por fin cumplí mi sueño de ser Astronauta, y pude visitar a N.A.L.A, me lo crees? ;) ;)", level: 1 },
+   
 ];
 
 function renderMailList() {
@@ -662,5 +817,4 @@ function readEmail(id) {
         </div>
         <div class="mail-body">${mail.body}</div>
     `;
-
 }
