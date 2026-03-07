@@ -469,7 +469,7 @@ const puzzles = {
             { text: "<POETI> No conozco la clave root, pero Jeremy me comentó hace muchos años que la había respaldado por si acaso pasaba algo como esto, y que yo podria identificarla", color: "cyan" },
             { text: "<POETI> Me dijo que estaria relacionada con unos poemas mios, pero no recuerdo cuales eran! T_T", color: "cyan" },
             { text: "<POETI> Segun lo que me dijo Jeremy, la clave deberia ser una palabra de 5 letras", color: "cyan" },
-            { text: "<KROS> Encontré los poemas indicados por el Poetista. No logré descifrarlos, pero creo que tú podrías hacerlo Agente. Te los acabo de mandar por correo al Servidor. ", color: "orange" }
+            { text: "<KROS> Encontré los poemas indicados por el Poetista. No logré descifrarlos, pero creo que tú podrías hacerlo Agente. Te los acabo de mandar por correo al Servidor. ", color: "orange" },
             { text: "!Has recibido un nuevo correo!", color: "white" },    
             { text: "<KROS> Agente, esto depende de ti. No tenemos más oportunidades. Confío en ti. El futuro de Kurios está en tus manos.", color: "orange" },
 
@@ -866,6 +866,7 @@ function readEmail(id) {
     `;
 
 }
+
 
 
 
