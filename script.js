@@ -804,10 +804,10 @@ function deleteCurrentNote() {
 renderNotesList();
 loadNote(1);
 
-const Caballo = `Galopa la tarde y en la pista caballo se enciende,
-Water Jet rompe el polvo y el asombro se prende;
-caballo en la crin, caballo en la apuesta, caballo que sorprende,
-me dejó diez dólares tibios y un latido que no se vende.`
+const Caballo = `Galopa la tarde, y cabello en pista enciende.
+                 Water Jet rompe el polvo, asombro se prende.
+                 Cabello en la crin, caballo en apuesta, caballo sorprende.
+                 Me dejó diez dólares tibios, y un latido que no vende.`
 const Escuela = `En la pizarra murmura la escuela su lección escondida,
 escuela de rumores, escuela de pupitres, escuela de vida;
 escuela que enseña a leer entre sombras y a buscar la salida,
@@ -827,10 +827,10 @@ trae en el casco canciones y la tierra en una mirada rara.`
 
 const allEmails = [
     { id: 10, from: "POETI 6", subject: "Acróstico", body: "Recuerdas la estructura de un acrostico? Son varias palabras, cuyas iniciales forman otras palabras, un ejemplo serian las palabras Amor, Irresistible, Raro, Eterno. La respuesta seria AIRE. Por suerte, los correos estan en orden, tienes que buscar palabras que se repitan mucho... Me lo crees? ;) ;)", level: 5 },
-    { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich.", body: "La leyenda cuenta que el Conde de Sandwich pasaba horas, a veces hasta 24 horas seguidas, jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrumpir su juego lo llevó a buscar una solución práctica. Pidió un trozo de roast carne asada colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias, esta solución fue como encontrar un TESORO.", level: 3 },
+    { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich", body: "Cuenta la leyenda que el Conde del Sandwich pasaba horas jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrupir su juego lo llevó a buscar una solución práctica. Pidió un trozo de carne asada, colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias. Esta solución fue equivalente a hallar un TESORO para sus actividades. ", level: 3 },
     { id: 1, from: "MUSCLE GUY", subject: "COMPRA YA", body: "COMPRA NUESTROS PRODUCTOS!!! OSSHA NO SIRVE!!! comprayaestacosa.com", level: 1 },
     { id: 2, from: "SUPERANTISPYWARE", subject: "DESCARGAR ANTISPYWARE", body: "SU DESPOSITIVO TIENE VIRUS, DESCARGUE YA SUPERANTISPYWARE PRO Y OBTENGA TODAS LAS MEJORAS", level: 1 },
-    { id: 5, from: "POETI 1", subject: "Water Jet", body: Caballo + ".............El Derbi del Hipódromo la Rinconada sucedió de manera estrepitosamente interesante, el CABALLO Water Jet superó expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
+    { id: 5, from: "POETI 1", subject: "Water Jet", body: Caballo + "\n El Derbi del Hipódromo la Rinconada sucedió de manera estrepitosamente interesante, el CABALLO Water Jet superó expectativas de maneras inesperadas, me hizo ganar 10 dolares, me lo crees? ;) ;)", level: 1 },
     { id: 6, from: "POETI 2", subject: "URBZ", body: Escuela + "...........Hay rumores de que nuestro mayor enemigo en esta vida, URBZ trabaja en una Escuela como profesor, me lo crees? ;) ;)", level: 1 },
     { id: 7, from: "POETI 3", subject: "OSSHA", body: Limpieza + ".........Compré 500 galones de OSSHA, porque me estaban diciendo que la oficina estaba muy sucia y que eran los mejores productos de Limpieza, me lo crees? ;) ;)", level: 1 },
     { id: 8, from: "POETI 4", subject: "Semillas", body: Durazno + ".......Me ahogué con una semilla de Durazno que estaba en el Te Lipton, me lo crees? ;) ;)", level: 1 },
@@ -866,6 +866,7 @@ function readEmail(id) {
     `;
 
 }
+
 
 
 
