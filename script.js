@@ -371,7 +371,7 @@ const puzzles = {
             { text: "<AI> ......", color: "white" },
             { text: "<AI> ¡Se ha detectado un FIREWALL!", color: "white" },
             { text: "<AI> El sistema te quiere desconectar. Necesito una clave para poder continuar. ", color: "white" },
-            { text: "<KROS> Parece que entremos que pensar fuera de nuestra zona de confort si queremos obtener esta clave.", color: "orange" },
+            { text: "<KROS> Parece que tendremos que pensar fuera de nuestra zona de confort si queremos obtener esta clave.", color: "orange" },
             { text: "<KROS> Tras revisar el historial de acciones del servidor, veo con curiosidad que hubo mofidicaciones en las imágenes que se mostraron en el terminal.", color: "orange" },
             { text: "<KROS> Sin embargo, debido a los protocolos de seguridad, no puedo verlas yo mismo desde aquí.", color: "orange" },
             { text: "<KROS> Busca en las imágenes algún tipo de código secreto, con una letra y un número. Por ejemplo, E4. ", color: "orange" },
@@ -390,7 +390,7 @@ const puzzles = {
             { text: "<AI> .", color: "white" },
             { text: "<AI> ..", color: "white" },
             { text: "<AI> ...", color: "white" },
-            { text: "<AI> Gradias a la clave que encontraste, he logrado descomprimir parte de la data corrupta.", color: "white" },
+            { text: "<AI> Gracias a la clave que encontraste, he logrado descomprimir parte de la data corrupta.", color: "white" },
             { text: "<AI> Ahora he desencriptado un 60% del expediente. ", color: "white" },
             { text: "<AI> El paso siguiente sería intentar acceder al usuario root del sistema. ", color: "white" },
             { text: "<AI> Sin embargo, por protocolos de seguridad, el acceso a las rutas /etc/passwd han sido cerradas.", color: "white" },
@@ -401,7 +401,7 @@ const puzzles = {
             { text: "<KROS> ¿Recibiste un mensaje de respuesta? Puede que sea de utilidad.", color: "orange" },
             { text: "<KROS> Parece una señal del Satélite N.A.L.A.", color: "orange" },
             { text: "<KROS> El Satélite NALA fue un sistema creado para monitorear las mascotas de los colegios que son Aliados Kurios.", color: "orange" },
-            { text: "<KROS> NALA significa Network for Animal Location and Assistance, o Red para la Localizacióny  Asistencia de Animales. ", color: "orange" },
+            { text: "<KROS> NALA significa Network for Animal Location and Assistance, o Red para la Localización y Asistencia de Animales. ", color: "orange" },
             { text: "<KROS> Dicho satélite poseía un sistema de almacenamiento que el administrador podía usar como respaldo de la información del Servidor.", color: "orange" },
             { text: "<KROS> Si pudiésemos acceder a él, podríamos recuperar un respaldo instantáneo (snapshot) del Servidor. Con ello, podríamos realizar una comparación con los archivos actuales, y ver en dónde hubo modificaciones tras el ataque. ", color: "orange" },   
             { text: "<KROS> Te ayudaré a establecer una conexión con el Satélite NALA. Sigue estos pasos: ", color: "orange" },
@@ -445,7 +445,7 @@ const puzzles = {
             { text: "<KROS> Ah, por supuesto, ahora apareces... Agente, él es el amigo más cercano del administrador. ", color: "orange" },
             { text: "<KROS> Es el Ingeniero en Sistemas del Servidor Kurios. Nos ayuda con los problemas que van surgiendo. Pero se cree poeta, y no es muy confiable...", color: "orange" },
             { text: "<KROS> Le llamamos el Poetista. ", color: "orange" },
-            { text: "<POETI> No me creo poeta, lo soy!!!! Y claro que soy de confiar!! Quien crees que resuelve los problemas del seervidor de kurios ... Y Jeremy donde está?? Por qué no habla??", color: "cyan" },
+            { text: "<POETI> No me creo poeta, lo soy!!!! Y claro que soy de confiar!! Quien crees que resuelve los problemas del servidor de kurios ... Y Jeremy donde está?? Por qué no habla??", color: "cyan" },
             { text: "<KROS> Jeremy está desaparecido, y nos encontramos en una crisis... Quien aparece conectado en la sesión de Jeremy, es uno de nuestro agentes más confiables. ", color: "orange" },
             { text: "<KROS> Sospechamos que el Administrador Jeremy ha sido secuestrado por la A.N.S. ", color: "orange" },
             { text: "<POETI> La ANS es real??? Me estas mintiendo, verdad? ;( ;(", color: "cyan" },
@@ -475,7 +475,7 @@ const puzzles = {
 
         ],
         answer: "celda",
-        hint: "Debes resolver un acrostico, las palabras ha usar se encuentran ocultas en los correos, la explicacion de que es un Acrostico se encuentra en el correo."
+        hint: "Debes resolver un acróstico, las palabras ha usar se encuentran ocultas en los correos, la explicacion de que es un Acróstico se encuentra en el correo."
     },
 
         6: {
@@ -489,7 +489,7 @@ const puzzles = {
             { text: "<URBZ> Confiaste tanto en tu famoso Kurios AI, que tanto orgullo te genera, y no te diste cuenta de que era yo. ", color: "red" },
             { text: "<POETI> Kurios AI debió desactivarse durante el ataque desde el principio, ya que era la primera capa de proteccion... ", color: "cyan" },
             { text: "<URBZ> Pensaron que se había mantenido activo, ya que confían demasiado en sus habilidades. ", color: "red" },   
-            { text: "ㅤ<URBZ> Fueron ingenuos. Yo ya había desactivaod Kurios AI. De hecho, fue lo primero que hice.", color: "red" },
+            { text: "ㅤ<URBZ> Fueron ingenuos. Yo ya había desactivado Kurios AI. De hecho, fue lo primero que hice.", color: "red" },
             { text: "<POETI> Imposible! Ni siquiera yo o Jeremy podríamos hacer eso... ", color: "cyan" },
             { text: "<KROS> No deberías ser capaz de desactivar Kurios AI, si yo... ", color: "orange" },
             { text: "<URBZ> El único error que cometí fue haber pensado que secuestrar al Administrador ayudaría en algo. Pero no, por eso he tenido que valerme de este plan alternativo. ", color: "red" },
@@ -826,7 +826,7 @@ astronauta que flota, astronauta que sueña, astronauta que ampara,
 trae en el casco canciones y la tierra en una mirada rara.`
 
 const allEmails = [
-    { id: 10, from: "POETI 6", subject: "Acróstico", body: "Recuerdas la estructura de un acrostico? Son varias palabras, cuyas iniciales forman otras palabras, un ejemplo serian las palabras Amor, Irresistible, Raro, Eterno. La respuesta seria AIRE. Por suerte, los correos estan en orden, tienes que buscar palabras que se repitan mucho... Me lo crees? ;) ;)", level: 5 },
+    { id: 10, from: "POETI 6", subject: "Acróstico", body: "Recuerdas la estructura de un acróstico? Son varias palabras, cuyas iniciales forman otras palabras, un ejemplo serian las palabras Amor, Irresistible, Raro, Eterno. La respuesta seria AIRE. Por suerte, los correos estan en orden, tienes que buscar palabras que se repitan mucho... Me lo crees? ;) ;)", level: 5 },
     { id: 4, from: "Historias Diarias", subject: "La Historia del Sandwich", body: "Cuenta la leyenda que el Conde del Sandwich pasaba horas jugando a las cartas o al AJEDREZ. La necesidad de alimentarse sin interrupir su juego lo llevó a buscar una solución práctica. Pidió un trozo de carne asada, colocado entre dos rebanadas de pan. Esta idea permitió que sus manos no se llenaran de grasa, manteniendo el tablero o las cartas limpias. Esta solución fue equivalente a hallar un TESORO para sus actividades. ", level: 3 },
     { id: 1, from: "MUSCLE GUY", subject: "COMPRA YA", body: "COMPRA NUESTROS PRODUCTOS!!! OSSHA NO SIRVE!!! comprayaestacosa.com", level: 1 },
     { id: 2, from: "SUPERANTISPYWARE", subject: "DESCARGAR ANTISPYWARE", body: "SU DESPOSITIVO TIENE VIRUS, DESCARGUE YA SUPERANTISPYWARE PRO Y OBTENGA TODAS LAS MEJORAS", level: 1 },
@@ -866,6 +866,7 @@ function readEmail(id) {
     `;
 
 }
+
 
 
 
